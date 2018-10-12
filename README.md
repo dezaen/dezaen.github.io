@@ -1,2 +1,0 @@
-# nuxd
-personal website
