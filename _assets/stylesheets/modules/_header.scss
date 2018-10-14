@@ -4,8 +4,7 @@
 
 .header-nav {
   display: block;
-  padding: 75px 0 20px;
-  border-bottom: 1px solid $base-border-color;
+  padding: 16px 0 16px;
 }
 
 .header-logo {
@@ -16,9 +15,8 @@
   color: $header-logo-color;
   text-decoration: none;
 }
-
-.header-links {
-  float: right;
+.header-links{float: right;}
+.header-links, .footer-links {
   padding: 0;
   margin: 15px 0 0;
   list-style: none;

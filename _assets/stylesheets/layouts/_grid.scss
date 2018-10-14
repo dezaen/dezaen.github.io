@@ -41,7 +41,10 @@
 
 // Component
 // =============================================================================
-
+.grid-container{
+  max-width: $max-width;
+  padding: $gutter*4
+}
 .grid {
   display: block;
   padding: 0;
@@ -87,9 +90,9 @@
 // Centers your grid container with a max-width.
 
 .grid-centered {
-  max-width: $max-width;
   margin-right: auto;
   margin-left: auto;
+  display:block;
 }
 
 // Responsive

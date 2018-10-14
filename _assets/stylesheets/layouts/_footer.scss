@@ -6,12 +6,28 @@
   display: block;
   padding-top: 35px;
   margin-bottom: 85px;
-  border-top: 1px solid $base-border-color;
+
   p {
     font-size: 15px;
     color: $gray-light;
   }
   a {
     text-decoration: none;
+  }
+}
+
+@include breakpoint(extra-small) {
+.footer {
+  text-align: center;
+}
+.footer-links {
+    display: block;
+    float: none;
+    li {
+      margin: 0 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -4,21 +4,18 @@
 
 @charset "UTF-8";
 
-// Cormorant Garamond
+// Brawler
 // =============================================================================
 
 @font-face {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Brawler';
   font-style: normal;
-  font-weight: 700;
-  src: asset_url('cormorant-garamond/Cormorant-Garamond-700.eot');
+  font-weight: 400;
+  src: asset_url('brawler/Brawler-Regular.ttf');
   src:
-    asset_url('cormorant-garamond/Cormorant-Garamond-700.eot?#iefix') format('embedded-opentype'),
-    local('Cormorant Garamond Medium'),
-    local('Cormorant-Garamond-600'),
-    asset_url('cormorant-garamond/Cormorant-Garamond-700.woff2') format('woff2'),
-    asset_url('cormorant-garamond/Cormorant-Garamond-700.woff') format('woff'),
-    asset_url('cormorant-garamond/Cormorant-Garamond-700.ttf') format('truetype');
+    asset_url('brawler/Brawler-Regular.ttf?#iefix') format('embedded-opentype'),
+    local('Brawler-Regular.ttf'),
+    asset_url('brawler/Brawler-Regular.ttf') format('truetype');
 }
 
 // Lato
