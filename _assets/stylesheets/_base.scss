@@ -131,10 +131,6 @@ blockquote {
 
 // Other
 // =============================================================================
-.grid.project{
-  padding:48px 0;
-}
-
 hr {
   margin: 0;
   border-top: 0;
@@ -165,4 +161,8 @@ img.emoji{
 ::selection {
   color: $white;
   background-color: $gray-darkest;
+}
+
+.grid.project{
+  padding:48px 0;
 }

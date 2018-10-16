@@ -4,23 +4,20 @@ title: "The high quality, completely customizable, performant and 100% free blog
 description: "Chalk uses all the best tools and merges them into one premium blogging theme."
 ---
 {% for post in paginator.posts limit:1 %}
-<div class="grid grid-centered project">
-  <div class="grid-cell with-4col">
-    <span class="">Recent work</span>
-    <h2>{{ post.title }}</h2>
-    <!-- <a class="button button-default" href="{{ post.url | relative_url }}" title="{{ post.title }}">View case study</a> -->
-  </div>
-  <div class="grid-cell with-8col">
-    <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-      <img src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
-    </a>
-  </div>
+<div class="grid-cell with-4col">
+  <span class="">Recent work</span>
+  <h2>{{ post.title }}</h2>
+  <!-- <a class="button button-default" href="{{ post.url | relative_url }}" title="{{ post.title }}">View case study</a> -->
+</div>
+<div class="grid-cell with-8col">
+  <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+    <img src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
+  </a>
 </div>
 {% endfor %}
 
-<hr>
-
-<div class="grid grid-centered article-list">
+<!-- old work -->
+<div class="article-list">
   {% for post in paginator.posts offset:1 limit:2 %}
     <div class="grid-cell with-6col article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
       <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
@@ -58,7 +55,10 @@ description: "Chalk uses all the best tools and merges them into one premium blo
       </div>
     </div>
   {% endfor %}
+</div>
 
+<!-- paginator -->
+<ul>
   {% if paginator.total_pages > 1 %}
     <li class="article-pagination {% if site.settings.scrollappear_enabled %}scrollappear{% endif %}">
       {% if paginator.next_page %}
