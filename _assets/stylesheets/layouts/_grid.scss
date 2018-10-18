@@ -43,8 +43,9 @@
 // =============================================================================
 .grid-container{
   max-width: $max-width;
-  padding: $gutter*4
+  padding: 0 $gutter*4
 }
+
 .grid {
   display: block;
   padding: 0;
