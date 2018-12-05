@@ -7,7 +7,8 @@ description: "A UX Designer with more than 5 Years of experience in Product Desi
 {% for post in paginator.posts limit:1 %}
 <div class="grid-cell with-4col">
   <span class="">Recent work</span>
-  <h2>{{ post.title }}</h2>
+  <h1>{{ post.title }}</h1>
+  <!-- <p>{{post.description}}</p> -->
   <!-- <a class="button button-default" href="{{ post.url | relative_url }}" title="{{ post.title }}">View case study</a> -->
 </div>
 <div class="grid-cell with-8col">

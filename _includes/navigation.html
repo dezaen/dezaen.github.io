@@ -10,14 +10,14 @@
     {% endif %}
     {% if site.resume_enabled == true %}
       <li>
-        <a href="{{ 'resume' | relative_url }}" title="Resume">
-          Resume
+        <a href="{% asset 'resume_niranjan_gupta.pdf' @path %}" title="Resume" target="_blank">
+          Résumé
         </a>
       </li>
     {% endif %}
     {% if site.contact_enabled == true %}
       <li>
-        <a href="{{ 'contact' | relative_url }}" title="Contact">
+        <a href="mailto:niranjangupta.jun3@gmail.com" title="Contact">
           Contact
         </a>
       </li>

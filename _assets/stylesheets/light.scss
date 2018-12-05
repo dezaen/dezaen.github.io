@@ -7,8 +7,8 @@
 
 // Shades of gray
 
-$black: #000;
-$gray-darkest: #121111;
+$black: #222222;
+$gray-darkest: #444444;
 $gray-darker: lighten($gray-darkest, 15);
 $gray-dark: lighten($gray-darkest, 30);
 $gray: lighten($gray-darkest, 45);
@@ -19,7 +19,7 @@ $white: #fff;
 
 // Font colors
 
-$base-font-color: $gray-dark;
+$base-font-color: $gray-darker;
 $base-accent-color: $gray-dark;
 $base-accent-highlighted-color: darken($base-accent-color, 15);
 
@@ -68,3 +68,38 @@ $article-paginator-color-hover: $gray-darkest;
 @import "modules/highlights-light";
 @import "modules/scrollappear";
 @import "modules/tags";
+
+
+.grid.project{
+  padding:48px 0;
+}
+
+section{
+  padding:90px 0
+}
+.no-padding img {
+	margin-bottom: 0px;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.bg_gray {
+	background-color:#f5f5f5;
+}
+
+.bg_black {
+	background-color:#222222;
+
+	h2, h3, h4 {
+		color: #ffffff;
+	}
+	p {
+		color: rgba(255,255,255,0.7);
+	}
+}
+
+.profile-image{
+	padding: 0 60px;
+}

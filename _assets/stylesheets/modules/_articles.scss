@@ -4,7 +4,7 @@
 
 .article {
   display: block;
-  margin: 100px 0;
+  margin: 90px 0;
 }
 
 .article-list {
@@ -164,10 +164,14 @@
   h3,
   h4 {
     display: block;
-    margin-bottom: 10px;
-    font-family: $sans-serif;
+    margin-bottom: 16px;
+    font-family: $serif;
     color: $article-post-titles-color;
   }
+  h2 {
+   margin-bottom: 32px; 
+  }
+
   blockquote p {
     margin-bottom: 0;
   }
@@ -188,7 +192,8 @@
 
 .article-share {
   display: block;
-  margin-top: -4px;
+  padding: 32px 0;
+
   a {
     display: inline-block;
     margin-right: 12px;

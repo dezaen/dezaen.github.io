@@ -5,11 +5,12 @@
 // Typography
 // =============================================================================
 
-$sans-serif: "Lato", Helvetica, Arial, sans-serif;
-$serif: "Brawler", Courier, serif;
+$sans-serif: "Heebo", Helvetica, Arial, sans-serif;
+$serif: "Merriweather", Courier, serif;
 $base-font-family: $sans-serif;
 $base-font-weight: 400;
-$base-font-weight-bold: 700;
+$base-font-weight-bold: 500;
+$base-font-weight-thin: 300;
 
 // Colors
 // =============================================================================
@@ -18,7 +19,7 @@ $base-font-weight-bold: 700;
 
 $brand-success: #1fbf92;
 $brand-danger: #e74b3c;
-$brand-primary: #3449ed;
+$brand-primary: #5324B7;
 $brand-warning: #f1c90b;
 
 // Sizes
@@ -34,7 +35,7 @@ $negative-gutter: 0 - $gutter;
 
 // Font sizes
 
-$base-font-size: 18px;
+$base-font-size: 16px;
 $base-line-height: 1.8;
 
 // Box sizes

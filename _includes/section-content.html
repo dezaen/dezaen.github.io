@@ -1,13 +1,37 @@
-<section>
+<section class="{{include.elements.class}}">
 <div class="grid-container">
   <div class="grid">
     {% for attr in include.elements.columns %}
       <div class="grid-cell {{attr.column}}">
-          {% if attr.title %} <h2>{{attr.title}}</h2> {% endif %}
+          {% if attr.heading %} <h2>{{attr.heading}}</h2> {% endif %}
+          {% if attr.subheading %}<h4>{{attr.subheading}}</h4> {% endif %}
           {% if attr.description %} <p>{{attr.description}}</p> {% endif %}
           {% if attr.image %} <img src="{% asset '{{attr.image}}' @path %}" alt="{{attr.alt}}"> {% endif %}
+          {% if attr.website %} <a href="{{attr.website}}" class="link">Visit website</a> {% endif %}
       </div>
     {% endfor %}
   </div>
-</div> 
+
+  <!-- nested columns -->
+  {% if include.elements.nest %}
+  <div class="grid">
+    {% for parent-col in include.elements.nest.parent %}
+    <div class="grid-cell {{parent-col.column}}">
+      <div class="grid">
+       {% for child in parent-col.child %}
+          <div class="grid-cell {{child.column}}">
+            {% if child.heading %} <h2>{{child.heading}}</h2> {% endif %}
+            {% if child.subheading %}<h4>{{child.subheading}}</h4> {% endif %}
+            {% if child.description %} <p>{{child.description}}</p> {% endif %}
+            {% if child.image %} <img src="{% asset '{{child.image}}' @path %}" alt="{{child.alt}}"> {% endif %}
+          </div>
+       {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <!-- nested column end -->
+
+</div>
 </section>
