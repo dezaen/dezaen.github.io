@@ -2,7 +2,7 @@
 
 blog_theme: light # Or use dark
 name: NG
-paginate: 25
+paginate: 2
 url: https://nuxd.github.io # add your site url (format: https://example.com)
 
 
@@ -15,10 +15,12 @@ local_fonts: false # Change to true if you wish to use local fonts
 rss_enabled: false # Change to false if not
 resume_enabled: true
 contact_enabled: true
-contact_enabled: true
-resume_enabled: true
 
-scrollappear_enabled: true # Change to false to disable
+# show posts dated in future and dont show drafts
+future: false
+show_drafts: false
+
+scrollappear_enabled: false # Change to false to disable
 social:
   dribbble: niran_jan # Add your Dribbble handle
   github: nuxd # Add your GitHub handle
