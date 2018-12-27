@@ -95,7 +95,7 @@ partials:
             - column      : with-12col
               heading     : Coming up with the identity
               description :
-                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the statbility and it's sharp edges in the figure depicts the cutting edge technology that Elucidata works on. 
+                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the stability and it's sharp edges in the figure depicts the cutting edge technology that Elucidata works on. 
 
         - column          : with-6col xs-with-12col
           child           : 
@@ -122,7 +122,7 @@ partials:
         - column      : with-6col xs-with-12col
           heading     : Typography
           description : 
-            I went through various typefaces on google fonts as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand gelled perfectly with it and looked beautiful at all different sizes.
+            I went through various typefaces on google fonts, as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand gelled perfectly with it and looked beautiful at all different sizes.
 
         - column      : with-12col
           image       : elucidata-branding/type-exploration.png
@@ -138,7 +138,7 @@ partials:
             - column      : with-12col 
               heading     : Choosing the right color
               description :
-                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achive this I looked at more than 100 Biotech companies on Angellist, and observed that there were very few companies which where using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades purple. We settled down with the below pallete.
+                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achive this I looked at more than 100 Biotech companies on Angellist, and observed that there were very few companies which where using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades of purple. We settled down with the below pallete.
 
         - column          : with-12col
           child           : 
