@@ -16,7 +16,7 @@ partials:
         - column      : with-8col xs-with-12col
           heading     : About
           description : |
-            Elucidata is a Biotech company which enables scientists find drug target. During the early stage of drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions and pharmaceutical companies. It’s product, Polly<sup>TM</sup> is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
+            Elucidata is a Biotech company which enables scientists find drug target, during the early stage of drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions and pharmaceutical companies. It’s product, Polly<sup>TM</sup> is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
           website     : http://www.elucidata.io
   
   - name    : section-content
@@ -95,7 +95,7 @@ partials:
             - column      : with-12col
               heading     : Coming up with the identity
               description :
-                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the statbility and it's sharp edges in the figure depicts the cutting edge technology that we are working on. 
+                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the statbility and it's sharp edges in the figure depicts the cutting edge technology that Elucidata works on. 
 
         - column          : with-6col xs-with-12col
           child           : 
@@ -138,8 +138,7 @@ partials:
             - column      : with-12col 
               heading     : Choosing the right color
               description :
-                As the company's branding had to be depict simplicity, seriousness, cutting edge technology and had to be unique. I went through the various Biotech companies logo and tried to get sense of the color pallete they were using. I observed that there were very few companies using purple color( combination of Red and Blue). Which symbolises energy and creativity.
-                After trying out few shades we settled down with the below color pallete.
+                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achive this I looked at more than 100 Biotech companies on Angellist, and observed that there were very few companies which where using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades purple. We settled down with the below pallete.
 
         - column          : with-12col
           child           : 
@@ -175,7 +174,7 @@ partials:
             - column      : with-12col
               heading     : How does it look on different platforms?
               description :
-                Well, It works perfectly gels with all the platforms.
+                Well, It works perfectly gels on all the platforms.
         - column      : with-6col
 
         - column          : with-12col
