@@ -13,7 +13,7 @@ partials:
 
   - name    : section-content
     columns :
-        - column      : with-8col
+        - column      : with-8col xs-with-12col
           heading     : About
           description : |
             Elucidata is a Biotech company which enables scientists find drug target. It does so by bringing insights from experiments carried out by scientists at different Labs, academic institutions and pharmaceutical industries. It’s product, Polly<sup>TM</sup> Is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check their website and stay tune for more product updates.
@@ -23,16 +23,16 @@ partials:
     class   : bg_gray    
     nest    :
       parent              : 
-        - column          : with-7col
+        - column          : with-7col xs-with-12col
           child           : 
-            - column      : with-8col
-              subheading  : Objective
+            - column      : with-8col xs-with-12col
+              heading     : Objective
               description : 
                 To create an identity which works on all the medium namely. Digital and Physical and easily identifiable.
-            - column      : with-4col
+            - column      : with-4col xs-with-12col
               description : 
 
-        - column          : with-5col
+        - column          : with-5col xs-with-12col
           child           : 
             - column      : with-6col
               subheading  : Team
@@ -58,12 +58,12 @@ partials:
       parent              :
         - column          : with-12col
           child           : 
-            - column      : with-3col
+            - column      : with-3col xs-with-12col
               heading     : The challenges we had to solve
               description : 
-            - column      : with-9col
+            - column      : with-9col xs-with-12col
 
-        - column          : with-6col
+        - column          : with-6col xs-with-12col
           child           : 
             - column      : with-6col
               subheading  : Existence
@@ -90,14 +90,14 @@ partials:
     class   : bg_gray
     nest    :
       parent          :
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           child       : 
             - column      : with-12col
               heading     : Coming up with the identity
               description :
                 We choose to go with the Benzene structure and made a dent into it. Which create “E” for the elucidata. Benzene rings is very known and identifiable compound to the general as well as with the scientist. Benezen depicts the statbility and sharp edges in the figure depicts the cutting edge technology that we are working on. 
 
-        - column          : with-6col
+        - column          : with-6col xs-with-12col
           child           : 
             - column      : with-6col
               image       : elucidata-branding/logo-1.jpg
@@ -119,7 +119,7 @@ partials:
 
   - name    : section-content
     columns :
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           heading     : Typography
           description : 
             I went through various typefaces on google fonts as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand jelled perfectly with it and looked beautiful at all different sizes.
@@ -131,11 +131,11 @@ partials:
     class   : bg_gray
     nest    :
       parent          :
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
 
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           child       : 
-            - column      : with-12col
+            - column      : with-12col 
               heading     : Choosing the right color
               description :
                 As the company branding had to be depict simplicity, seriousness, cutting edge technology and had to be unique. I went through the various Biotech companies logo and tried to get sense of the color pallete they were using. I observed that they were very few companies which had used purple color( combination of Red-Warm and Blue-colors). Which symbolises energy and creativity.
@@ -169,7 +169,7 @@ partials:
     class   : bg_gray
     nest    :
       parent          :
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           child       : 
             - column      : with-12col
               heading     : How does it look on different platforms?
@@ -179,10 +179,10 @@ partials:
 
         - column          : with-12col
           child           : 
-            - column      : with-6col
+            - column      : with-6col xs-with-12col
               image       : elucidata-branding/fb-post-1.png
               alt         : fb post 1
-            - column      : with-6col
+            - column      : with-6col xs-with-12col
               image       : elucidata-branding/fb-post-2.png
               alt         : fb post 2
 
@@ -192,11 +192,11 @@ partials:
         - column      : with-12col
           heading     : Key learnings
 
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           subheading  : Inclusion
           description : This project helped me understand the value of inclusion from different  stakeholders from the company. Once the logo was almost finalised. We showed to employees and asked their feedback of what they thought about the logo. They liked the designed and mostky there were questions about. Why this color? Why that font? Why this shape etc. At the end they all had their doubts cleared and supported the design.
 
-        - column      : with-6col
+        - column      : with-6col xs-with-12col
           subheading  : Brand strategy
           description : I learnt about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How the logo is going to be used in all sort of different context. We primarily focused on Print and Digital media. In Print we had to create the product sheets, Leaflet, scientific posters, visiting cards and in digital media we had to think of it’s usage in different context. For example, Website, Product, Social Media, Emailers etc.
 

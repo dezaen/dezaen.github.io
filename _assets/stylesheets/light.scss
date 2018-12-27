@@ -77,6 +77,7 @@ $article-paginator-color-hover: $gray-darkest;
 section{
   padding:90px 0
 }
+
 .no-padding img {
 	margin-bottom: 0px;
 }
@@ -102,4 +103,19 @@ section{
 
 .profile-image{
 	padding: 0 60px;
+}
+
+// Responsive
+// =============================================================================
+
+@include breakpoint(small) {
+  section{
+  	padding: 30px 0;
+  }
+  .profile-image{
+  	padding:0px;
+  	img{
+  		margin: 0 0 32px;
+  	}
+  }
 }

@@ -8,7 +8,7 @@
 // Create widths for each column.
 
 @mixin column-generator() {
-  @for $i from 1 through ($columns - 1) {
+  @for $i from 1 through ($columns) {
     &.with-#{$i}col {
       width: $one-column * $i;
     }
@@ -18,7 +18,7 @@
 // Create offsets for columns.
 
 @mixin offset-generator() {
-  @for $i from 1 through ($columns - 1) {
+  @for $i from 1 through ($columns) {
     &.with-#{$i}off {
       margin-left: $one-column * $i;
     }
@@ -29,11 +29,11 @@
 // Reset offsets to a margin-left of 0.
 
 @mixin responsive-grid-generator() {
-  @for $i from 1 through ($columns - 1) {
-    &.with-#{$i}col {
-      width: 100%;
+  @for $i from 1 through ($columns) {
+    &.xs-with-#{$i}col {
+      width: $one-column * $i;
     }
-    &.with-#{$i}off {
+    &.xs-with-#{$i}off {
       margin-left: 0;
     }
   }
@@ -43,7 +43,9 @@
 // =============================================================================
 .grid-container{
   max-width: $max-width;
-  padding: 0 $gutter*4
+  padding: 0 $gutter;
+  margin: auto;
+
 }
 
 .grid {
@@ -99,7 +101,7 @@
 // Responsive
 // =============================================================================
 
-@include breakpoint(small) {
+@include breakpoint(extra-small) {
   .grid-cell {
     @include responsive-grid-generator();
   }
