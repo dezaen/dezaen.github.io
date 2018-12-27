@@ -16,7 +16,7 @@ partials:
         - column      : with-8col xs-with-12col
           heading     : About
           description : |
-            Elucidata is a Biotech company which enables scientists find drug target. It does so by bringing insights from experiments carried out by scientists at different Labs, academic institutions and pharmaceutical industries. It’s product, Polly<sup>TM</sup> Is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check their website and stay tune for more product updates.
+            Elucidata is a Biotech company which enables scientists find drug target. During the early stage of drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions and pharmaceutical companies. It’s product, Polly<sup>TM</sup> is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
           website     : http://www.elucidata.io
   
   - name    : section-content
@@ -28,7 +28,7 @@ partials:
             - column      : with-8col xs-with-12col
               heading     : Objective
               description : 
-                To create an identity which works on all the medium namely. Digital and Physical and easily identifiable.
+                Was to create an easily recognizable identity which works on Digital and Physical media in all forms and shape.
             - column      : with-4col xs-with-12col
               description : 
 
@@ -68,22 +68,22 @@ partials:
             - column      : with-6col
               subheading  : Existence
               description : 
-                Very few people knew about us
+                Very few people knew about us.
 
             - column      : with-6col
               subheading  : Work clarity
               description : 
-                Potential hire did not understand what we do. Same was the case for the clients.
+                Very few people understood the kind of work we were doing.
 
             - column      : with-6col
               subheading  : Trust
               description : 
-                Potential hire and clients had issues with trusting what we were doing.
+                Potential hires and clients struggled to trust the company and our offerings.
 
             - column      : with-6col
               subheading  : Naive
               description : 
-                We looked like a naive company. Who did not know what we were doing. 
+                We looked like a naive company. Even though ours offerings were used by big pharma companies. 
         - column          : with-6col
 
   - name    : section-content
@@ -95,7 +95,7 @@ partials:
             - column      : with-12col
               heading     : Coming up with the identity
               description :
-                We choose to go with the Benzene structure and made a dent into it. Which create “E” for the elucidata. Benzene rings is very known and identifiable compound to the general as well as with the scientist. Benezen depicts the statbility and sharp edges in the figure depicts the cutting edge technology that we are working on. 
+                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the statbility and it's sharp edges in the figure depicts the cutting edge technology that we are working on. 
 
         - column          : with-6col xs-with-12col
           child           : 
@@ -122,7 +122,7 @@ partials:
         - column      : with-6col xs-with-12col
           heading     : Typography
           description : 
-            I went through various typefaces on google fonts as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand jelled perfectly with it and looked beautiful at all different sizes.
+            I went through various typefaces on google fonts as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand gelled perfectly with it and looked beautiful at all different sizes.
 
         - column      : with-12col
           image       : elucidata-branding/type-exploration.png
@@ -138,7 +138,8 @@ partials:
             - column      : with-12col 
               heading     : Choosing the right color
               description :
-                As the company branding had to be depict simplicity, seriousness, cutting edge technology and had to be unique. I went through the various Biotech companies logo and tried to get sense of the color pallete they were using. I observed that they were very few companies which had used purple color( combination of Red-Warm and Blue-colors). Which symbolises energy and creativity.
+                As the company's branding had to be depict simplicity, seriousness, cutting edge technology and had to be unique. I went through the various Biotech companies logo and tried to get sense of the color pallete they were using. I observed that there were very few companies using purple color( combination of Red and Blue). Which symbolises energy and creativity.
+                After trying out few shades we settled down with the below color pallete.
 
         - column          : with-12col
           child           : 
@@ -194,11 +195,11 @@ partials:
 
         - column      : with-6col xs-with-12col
           subheading  : Inclusion
-          description : This project helped me understand the value of inclusion from different  stakeholders from the company. Once the logo was almost finalised. We showed to employees and asked their feedback of what they thought about the logo. They liked the designed and mostky there were questions about. Why this color? Why that font? Why this shape etc. At the end they all had their doubts cleared and supported the design.
+          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalising the final design. Once the logo was finalised. We showed it to employees and asked their feedback about the logo and branding guidelines. Almost all of them liked the designed and wanted to know the rationale behind Why this color? Why that font? Why this shape? etc. At the end they all had their doubts cleared and supported the design decisions.
 
         - column      : with-6col xs-with-12col
           subheading  : Brand strategy
-          description : I learnt about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How the logo is going to be used in all sort of different context. We primarily focused on Print and Digital media. In Print we had to create the product sheets, Leaflet, scientific posters, visiting cards and in digital media we had to think of it’s usage in different context. For example, Website, Product, Social Media, Emailers etc.
+          description : I learnt about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How will the logo to be used in different contexts? We primarily focused on Print and Digital media. In Print, we had to consider design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers etc.
 
 
   - name    : section-image-full-width
