@@ -86,6 +86,14 @@ section{
 	padding: 0px;
 }
 
+.with-less-margin
+{
+	padding: 0;	
+	img{
+		margin:0 0 30px;
+	}
+}
+
 .bg_gray {
 	background-color:#f5f5f5;
 }
