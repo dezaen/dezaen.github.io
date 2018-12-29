@@ -176,7 +176,7 @@ partials:
             - column      : with-12col
               heading     : How does it look on different platforms?
               description :
-                Well, It works perfectly gels on all the platforms.
+                Well, It perfectly gels on all the platforms.
         - column      : with-6col
 
         - column          : with-12col

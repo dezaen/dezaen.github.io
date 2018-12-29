@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logo folio"
-description: "Best of identities designed till date"
+description: "Collection of the logo designed till date"
 thumb_image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 
@@ -16,7 +16,7 @@ partials:
         - column      : with-8col xs-with-12col
           heading     : Thought
           description : |
-            Sometimes I wonder, In this digital world, things change so rapidly that your work gets lost in the updates. As a designer I always want my designs to be timeless, and to create timeless design it takes a lot for something to come up. Logos or identity of a company or product, I think from the plethora of design work is something that stays visible for long. Below are some of them which I am most proud of.
+            Sometimes I wonder, In this digital world, everything changes swiftly that your work gets lost in the updates. As a designer I always want my designs to be timeless, and to create timeless design it takes sweat for something great to come out. Logo or identity of a company or product from a plethora of design work is something that stays visible for long. Below are some I am most proud of.
    
   - name    : section-image
     class   : with-less-margin
