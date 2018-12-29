@@ -196,11 +196,11 @@ partials:
 
         - column      : with-6col xs-with-12col
           subheading  : Inclusion
-          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalizing the final design. Once the logo was finalized. We showed it to employees and asked their feedback about the logo and branding guidelines. Almost all of them liked the designed and wanted to know the rationale behind Why this color? Why that font? Why this shape? etc. In the end, they all had their doubts cleared and supported the design decisions.
+          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalizing the design. Once the logo was finalized. We showed it to everyone and asked for their feedback. Most of them liked the designed and wanted to know the rationale behind the choice of color, font, and shape etc. This sparked the dialog and we really had some fresh suggestions from the team. Some of them made to our final design tweaks.
 
         - column      : with-6col xs-with-12col
           subheading  : Brand strategy
-          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How will the logo be used in different contexts? We primarily focused on Print and Digital media. In Print, we had to consider the design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers etc.
+          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of the project, and helped me answer the questions like "How will the logo be used in a certain context? We primarily focused on Print and Digital media. In Print, we had to consider the design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers, Slides, Design system etc.
 
 
   - name    : section-image-full-width
