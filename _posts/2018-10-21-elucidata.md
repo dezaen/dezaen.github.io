@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Elucidata"
+title: "Elucidata branding"
 description: "Identity design, branding and more"
 thumb_image: "elucidata-branding/hero.png"
 tags: [branding]
@@ -16,7 +16,7 @@ partials:
         - column      : with-8col xs-with-12col
           heading     : About
           description : |
-            Elucidata is a Biotech company which enables scientists find drug target, during the early stage of drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions and pharmaceutical companies. It’s product, Polly<sup>TM</sup> is one stop solutions for analysing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
+            Elucidata is a Biotech company which enables scientists to find drug target, during the early stage of a drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions, and pharmaceutical companies. It's product, Polly<sup>TM</sup> is one stop solutions for analyzing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
           website     : http://www.elucidata.io
   
   - name    : section-content
@@ -26,14 +26,20 @@ partials:
         - column          : with-7col xs-with-12col
           child           : 
             - column      : with-8col xs-with-12col
-              heading     : Objective
+              heading     : Goal
               description : 
-                Was to create an easily recognizable identity which works on Digital and Physical media in all forms and shape.
+                Create an easily recognizable identity which works on Digital and Physical media in all forms and shape.
+
             - column      : with-4col xs-with-12col
               description : 
 
         - column          : with-5col xs-with-12col
           child           : 
+            - column      : with-6col
+              subheading  : My role
+              description : 
+                Art Direction <br> Graphic Design
+
             - column      : with-6col
               subheading  : Team
               description : | 
@@ -45,21 +51,17 @@ partials:
                 Figma <br> Illustrator 
 
             - column      : with-6col
-              subheading  : My role
-              description : 
-                Art Direction <br> Graphic Design
-
-            - column      : with-6col
               subheading  : Duration
               description : 
                 2 Weeks
+
   - name    : section-content
     nest    :
       parent              :
         - column          : with-12col
           child           : 
             - column      : with-3col xs-with-12col
-              heading     : The challenges we had to solve
+              heading     : Challenges
               description : 
             - column      : with-9col xs-with-12col
 
@@ -83,7 +85,7 @@ partials:
             - column      : with-6col
               subheading  : Naive
               description : 
-                We looked like a naive company. Even though ours offerings were used by big pharma companies. 
+                We looked like a naive company. Even though our offerings were used by big pharma companies. 
         - column          : with-6col
 
   - name    : section-content
@@ -93,9 +95,9 @@ partials:
         - column      : with-6col xs-with-12col
           child       : 
             - column      : with-12col
-              heading     : Coming up with the identity
+              heading     : Birth of Elucidata identity
               description :
-                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. Benzene rings is very known and easily recognizable compound to both the persona( potential hires and clients ). Benezen depicts the stability and it's sharp edges in the figure depicts the cutting edge technology that Elucidata works on. 
+                After trying a lot of ideas, we choose to go with the Benzene structure and made a dent into it to create “E” for the Elucidata. The benzene ring is a very known and easily recognizable compound to both the persona( potential hires and clients ). Benzene depicts the stability and its sharp edges in the figure depict the cutting edge technology that Elucidata works on. 
 
         - column          : with-6col xs-with-12col
           child           : 
@@ -122,7 +124,7 @@ partials:
         - column      : with-6col xs-with-12col
           heading     : Typography
           description : 
-            I went through various typefaces on google fonts, as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product an unique personality and fulfilled all the need of any professional quality typeface. Merriweather on the other hand gelled perfectly with it and looked beautiful at all different sizes.
+            I went through various typefaces on google fonts, as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content-heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product a unique personality and fulfilled all the need of any professional quality typeface. Merriweather, on the other hand, gelled perfectly with it and looked beautiful at all different sizes.
 
         - column      : with-12col
           image       : elucidata-branding/type-exploration.png
@@ -136,9 +138,9 @@ partials:
         - column      : with-6col xs-with-12col
           child       : 
             - column      : with-12col 
-              heading     : Choosing the right color
+              heading     : Brand colors
               description :
-                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achive this I looked at more than 100 Biotech companies on Angellist, and observed that there were very few companies which where using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades of purple. We settled down with the below pallete.
+                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achieve this I looked at more than 100 Biotech companies on Angellist and observed that there were very few companies which were using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades of purple. We settled down with the below palette.
 
         - column          : with-12col
           child           : 
@@ -190,15 +192,15 @@ partials:
     class   : bg_black
     columns :
         - column      : with-12col
-          heading     : Key learnings
+          heading     : Learnings
 
         - column      : with-6col xs-with-12col
           subheading  : Inclusion
-          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalising the final design. Once the logo was finalised. We showed it to employees and asked their feedback about the logo and branding guidelines. Almost all of them liked the designed and wanted to know the rationale behind Why this color? Why that font? Why this shape? etc. At the end they all had their doubts cleared and supported the design decisions.
+          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalizing the final design. Once the logo was finalized. We showed it to employees and asked their feedback about the logo and branding guidelines. Almost all of them liked the designed and wanted to know the rationale behind Why this color? Why that font? Why this shape? etc. In the end, they all had their doubts cleared and supported the design decisions.
 
         - column      : with-6col xs-with-12col
           subheading  : Brand strategy
-          description : I learnt about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How will the logo to be used in different contexts? We primarily focused on Print and Digital media. In Print, we had to consider design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers etc.
+          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of, How will the logo be used in different contexts? We primarily focused on Print and Digital media. In Print, we had to consider the design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers etc.
 
 
   - name    : section-image-full-width
