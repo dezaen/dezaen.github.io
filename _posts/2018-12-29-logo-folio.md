@@ -16,7 +16,7 @@ partials:
         - column      : with-8col xs-with-12col
           heading     : Thought
           description : |
-            Sometimes I wonder, in this digital world where everything changes quickly that your work gets lost in the updates. As a designer, I always want my designs to be timeless, and believe me it takes sweat. It comes after years of practice, to develop an eye to nudge that one bloating pixel and it takes sleepless nights for that one idea fresh idea which makes to the final. Logo of a company or product is the one from a plethora of design work that stays visible for long. Below are some I am most proud of.
+            Sometimes I wonder, in this digital world where everything changes quickly that your work gets lost in the updates. As a designer, I always want my designs to be timeless, and believe me it takes sweat. It comes after years of practice, to develop an eye to nudge that one bloating pixel and it takes sleepless nights for that one fresh idea which makes to the final. Logo of a company or product is the one from a plethora of design work, that stays visible for long. Below are some I am most proud of.
    
   - name    : section-image
     class   : with-less-margin
