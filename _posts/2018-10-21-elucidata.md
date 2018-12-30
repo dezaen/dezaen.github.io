@@ -196,11 +196,11 @@ partials:
 
         - column      : with-6col xs-with-12col
           subheading  : Inclusion
-          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were really helpful in finalizing the design. Once the logo was finalized. We showed it to everyone and asked for their feedback. Most of them liked the designed and wanted to know the rationale behind the choice of color, font, and shape etc. This sparked the dialog and we really had some fresh suggestions from the team. Some of them made to our final design tweaks.
+          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were helpful in finalizing the design. Once the logo was finalized. We showed it to everyone and asked for their feedback. Most of them liked it and wanted to know the rationale behind the choice of color, font, and shape etc. This exercise sparked a dialog between the teams and we had some fresh suggestions. Out of which a few made to our final tweaks.
 
         - column      : with-6col xs-with-12col
           subheading  : Brand strategy
-          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of the project, and helped me answer the questions like "How will the logo be used in a certain context? We primarily focused on Print and Digital media. In Print, we had to consider the design of product sheets, Leaflets, scientific posters, visiting cards and in Digital media we had Website, Product, Social Media, Emailers, Slides, Design system etc.
+          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of the project, and helped me answer the questions like "How will the logo be used in a certain context?" We primarily focused on Print and Digital media. In Print we had to consider the design of product sheets, leaflets, scientific posters, visiting card and in Digital media we had website, product, social media, emailers, slides, and design system etc.
 
 
   - name    : section-image-full-width
