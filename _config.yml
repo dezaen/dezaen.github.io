@@ -2,7 +2,7 @@
 
 blog_theme: light # Or use dark
 name: NG
-paginate: 2
+paginate: 100
 url: https://nuxd.github.io # add your site url (format: https://example.com)
 
 

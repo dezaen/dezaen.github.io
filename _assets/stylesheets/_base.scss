@@ -164,3 +164,15 @@ img.emoji{
   color: $white;
   background-color: $gray-darkest;
 }
+
+.button-default {
+  background-color: #5324b7;
+  padding: 8px 12px;
+  color: #fff;
+  margin: 60px 0 0;
+  display: inline-block;
+}
+.button-default:hover {
+  background-color: #5324b7;
+  color: #fff;
+}
