@@ -5,6 +5,14 @@
 // Settings
 // =============================================================================
 
+// Grid
+
+$columns: 12;
+$max-width: 1200px;
+$gutter: 16px;
+$one-column: 100% / $columns;
+$negative-gutter: 0 - $gutter;
+
 // Create widths for each column.
 
 @mixin column-generator() {
@@ -45,7 +53,6 @@
   max-width: $max-width;
   padding: 0 $gutter;
   margin: auto;
-
 }
 
 .grid {
@@ -54,6 +61,12 @@
   margin: 0 $negative-gutter;
   font-size: 0;
   text-align: left;
+}
+
+.grid-centered {
+  margin-right: auto;
+  margin-left: auto;
+  display:block;
 }
 
 // Descendants
@@ -70,7 +83,6 @@
   width: 100%;
   padding: 0 $gutter;
   margin: 0;
-  font-size: $base-font-size;
   text-align: left;
   vertical-align: top;
   &.is-centered {
@@ -88,14 +100,6 @@
   &.is-bottom {
     vertical-align: bottom;
   }
-}
-
-// Centers your grid container with a max-width.
-
-.grid-centered {
-  margin-right: auto;
-  margin-left: auto;
-  display:block;
 }
 
 // Responsive

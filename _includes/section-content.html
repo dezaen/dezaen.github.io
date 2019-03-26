@@ -1,8 +1,8 @@
 <section class="{{include.elements.class}}">
-<div class="grid-container">
-  <div class="grid">
+<div class="container">
+  <div class="row">
     {% for attr in include.elements.columns %}
-      <div class="grid-cell {{attr.column}}">
+      <div class="{{attr.column}}">
           {% if attr.heading %} <h2>{{attr.heading}}</h2> {% endif %}
           {% if attr.subheading %}<h4>{{attr.subheading}}</h4> {% endif %}
           {% if attr.description %} <p>{{attr.description}}</p> {% endif %}
@@ -14,12 +14,12 @@
 
   <!-- nested columns -->
   {% if include.elements.nest %}
-  <div class="grid">
+  <div class="row">
     {% for parent-col in include.elements.nest.parent %}
-    <div class="grid-cell {{parent-col.column}}">
-      <div class="grid">
+    <div class="{{parent-col.column}}">
+      <div class="row">
        {% for child in parent-col.child %}
-          <div class="grid-cell {{child.column}}">
+          <div class="{{child.column}}">
             {% if child.heading %} <h2>{{child.heading}}</h2> {% endif %}
             {% if child.subheading %}<h4>{{child.subheading}}</h4> {% endif %}
             {% if child.description %} <p>{{child.description}}</p> {% endif %}

@@ -1,7 +1,7 @@
 # Mandatory settings
 
 blog_theme: light # Or use dark
-name: NG
+name: # put your name here
 paginate: 100
 url: https://nuxd.github.io # add your site url (format: https://example.com)
 
@@ -23,7 +23,7 @@ show_drafts: false
 scrollappear_enabled: false # Change to false to disable
 social:
   dribbble: niran_jan # Add your Dribbble handle
-  github: nuxd # Add your GitHub handle
+  github: # Add your GitHub handle
   linkedin: niranjan-jun3 # Add your LinkedIn handle
   facebook: # Add your Facebook handle
   flickr: # Add your Flickr handle

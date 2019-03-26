@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logo folio"
-description: "Collection of the logo designed till date"
+description: "Best of the logo designed till date"
 thumb_image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 
@@ -13,7 +13,7 @@ partials:
 
   - name    : section-content
     columns :
-        - column      : with-8col xs-with-12col
+        - column      : col-md-8 col-sm-12
           heading     : Thought
           description : |
             Sometimes I wonder, in this digital world where everything changes quickly that your work gets lost in the updates. As a designer, I always want my designs to be timeless, and believe me it takes sweat. It comes after years of practice, to develop an eye to nudge that one bloating pixel and it takes sleepless nights for that one fresh idea which makes to the final. Logo of a company or product is the one from a plethora of design work, that stays visible for long. Below are some I am most proud of.

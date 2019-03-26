@@ -4,47 +4,16 @@ title: "Niranjan Gupta | User Experience Designer from New Delhi, India."
 description: "A UX Designer with more than 5 Years of experience in Product Design, Branding, Graphic Design and building startups"
 ---
 
-{% for post in paginator.posts limit:1 %}
-<section class="{{include.elements.class}}">
-  <div class="grid-cell with-4col xs-with-12col">
-    <h1>{{ post.title }}</h1>
-    <p>{{post.description}}</p>
-    <a class="button button-default" href="{{ post.url | relative_url }}" title="{{ post.title }}">View case study</a>
-  </div>
-  <div class="grid-cell with-8col xs-with-12col">
-    <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-      <img src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
-    </a>
-  </div>
-</section>
+{% for post in paginator.posts %}
+<div class="col-md-6">
+  <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+    <div class="project-card">
+      <span class="card-access-icon"></span>
+      <h3>{{ post.title }}</h3>
+      <p>{{post.description}}</p>
+      <span class="tag"></span>
+      <img class="project-thumbnail" src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
+    </div>
+  </a>
+</div>
 {% endfor %}
-
-<!-- old work -->
-{% for post in paginator.posts offset:1 limit:2 %}
-<section class="{{include.elements.class}}">
-  <div class="grid-cell with-4col xs-with-12col">
-    <h1>{{ post.title }}</h1>
-    <p>{{post.description}}</p>
-    <a class="button button-default" href="{{ post.url | relative_url }}" title="{{ post.title }}">View case study</a>
-  </div>
-  <div class="grid-cell with-8col xs-with-12col">
-    <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-      <img src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
-    </a>
-  </div>
-</section>
-{% endfor %}
-
-<!-- paginator -->
-<ul>
-  {% if paginator.total_pages > 1 %}
-    <li class="article-pagination {% if site.settings.scrollappear_enabled %}scrollappear{% endif %}">
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="article-pagination-left">{% include svg-icon.html icon="arrow-left" %} Older posts</a>
-      {% endif %}
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="article-pagination-right">Newer posts {% include svg-icon.html icon="arrow-right" %}</a>
-      {% endif %}
-    </li>
-  {% endif %}
-</ul>

@@ -2,30 +2,64 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  <main>
     <!-- header and hero -->
-    <div class="grid-container">
-      <div class="grid">
-        <div class="grid-cell">
-          {% include navigation.html %}
-        </div>
-      </div>
-    </div>
+    <section class="header">
+      {% include navigation.html %}
+    </section>
+
+    <!-- Intro -->
+    <section class="intro">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <h1>Hi, I am Niranjan. A User Experience Designer from New Delhi, India. Previously at <a href="http://www.elucidata.io/" target="_blank">Elucidata</a>, <a href="https://www.bhaane.com" target="_blank">Bhaane</a>, Surgge( Closed ), and Tapzo( Acquired by Amazon Pay ).</h1>
+                  <p>My expertice lies in Visual Design and currently learning more about User Research. Have a look around and drop me an email <a href="mailto:niranjangupta.jun3@gmail.com">here</a>, if you are hiring or need any help.</p>
+                </div>
+                <div class="col-md-5 col-sm-6">
+                  <img class="img-fluid" src="{% asset 'niranjan-gupta.png' @path %}" alt="niranjan gupta">
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>  
+    </section>
+    
     <!-- content -->
-    <div class="grid-container article">
-      <div class="grid">
-          {{ content }}
+    <section class="projects">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <h2>Selected Projects</h2>
+            </div>
+          </div>
+
+          <div class="scroll">    
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <div class="row">
+                  {{ content }}
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
+    </section>
+
     <!-- foooter -->
-    <div class="grid-container">
-      <div class="grid">
-        <div class="grid-cell">
-          {% include footer.html %}
+    <section class="footer">
+      {% include footer.html %}
+    </section>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="muted-text">Designed and Developed with love by Niranjan Gupta</p>
         </div>
       </div>
     </div>
-  </main>
+    
   {% include javascripts.html %}
 </body>
 </html>
