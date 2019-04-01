@@ -1,7 +1,7 @@
 # Mandatory settings
 
 blog_theme: light # Or use dark
-name: # put your name here
+name: Niranjan Gupta # put your name here
 paginate: 100
 url: https://nuxd.github.io # add your site url (format: https://example.com)
 

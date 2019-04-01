@@ -6,7 +6,7 @@
           {% if attr.heading %} <h2>{{attr.heading}}</h2> {% endif %}
           {% if attr.subheading %}<h4>{{attr.subheading}}</h4> {% endif %}
           {% if attr.description %} <p>{{attr.description}}</p> {% endif %}
-          {% if attr.image %} <img src="{% asset '{{attr.image}}' @path %}" alt="{{attr.alt}}"> {% endif %}
+          {% if attr.image %} <img class="reveal" src="{% asset '{{attr.image}}' @path %}" alt="{{attr.alt}}"> {% endif %}
           {% if attr.website %} <a href="{{attr.website}}" class="link">Visit website</a> {% endif %}
       </div>
     {% endfor %}
@@ -23,7 +23,7 @@
             {% if child.heading %} <h2>{{child.heading}}</h2> {% endif %}
             {% if child.subheading %}<h4>{{child.subheading}}</h4> {% endif %}
             {% if child.description %} <p>{{child.description}}</p> {% endif %}
-            {% if child.image %} <img src="{% asset '{{child.image}}' @path %}" alt="{{child.alt}}"> {% endif %}
+            {% if child.image %} <img class="reveal" src="{% asset '{{child.image}}' @path %}" alt="{{child.alt}}"> {% endif %}
           </div>
        {% endfor %}
       </div>

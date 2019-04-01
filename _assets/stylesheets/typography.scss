@@ -2,7 +2,7 @@
 // =============================================================================
 
 $sans-serif: "Abel", Arial, sans-serif;
-$serif: "Playfair Display", serif;
+$serif: "Merriweather", serif;
 $base-font-family: $sans-serif;
 $base-font-weight: 400;
 $base-font-weight-bold: 500;
@@ -25,12 +25,14 @@ body {
   line-height: $base-line-height;
   color: $charcoal;
   background: $white;
+  color: $gray;
 }
 
 p {
   margin: 0 0 16px;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
+  color: $gray;
 }
 
 b,
@@ -49,7 +51,7 @@ h6 {
   line-height: $base-line-height;
   text-rendering: optimizeLegibility;
   color: $charcoal;
-  font-weight: $base-font-weight-bold;
+  font-weight: $base-font-weight-thin;
 }
 
 h1 {

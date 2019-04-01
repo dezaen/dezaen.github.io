@@ -12,8 +12,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
+            <h1 class="reveal">{{ page.title }}</h1>
+            <p class="reveal">{{ page.description }}</p>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
           {% include {{item.name}}.html elements = item %}
         {% endfor %}
     </section>
-
+    <hr>
     <!-- foooter -->
     <section class="footer">
       {% include footer.html %}

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Niranjan Gupta | User Experience Designer from New Delhi, India."
+title: "User Experience Designer from New Delhi, India."
 description: "A UX Designer with more than 5 Years of experience in Product Design, Branding, Graphic Design and building startups"
 ---
 
 {% for post in paginator.posts %}
 <div class="col-md-6">
   <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-    <div class="project-card">
+    <div class="project-card reveal">
       <span class="card-access-icon"></span>
       <h3>{{ post.title }}</h3>
       <p>{{post.description}}</p>

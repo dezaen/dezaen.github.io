@@ -17,15 +17,16 @@
 {% if site.scrollappear_enabled %}
   {% asset scrollappear.js %}
 {% endif %}
-
 {% asset application.js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
 <script>
-	ScrollReveal().reveal('.project-card',{
-    distance: '100%',
+	ScrollReveal().reveal('.reveal', {
+    distance: '120%',
     origin: 'bottom',
-    opacity: 0,
-    delay: 300, 
-    reset: true
-});
+    duration: 1000,
+    delay: 200,
+    interval: 300
+  });
+
 </script>
