@@ -1,27 +1,27 @@
 Arguments: 
-  /Users/niranjan/.nvm/versions/node/v9.2.0/bin/node /Users/niranjan/.nvm/versions/node/v9.2.0/bin/yarn install --modules-folder ./_assets/yarn
+  /usr/local/Cellar/node/11.10.1/bin/node /usr/local/bin/yarn install --modules-folder ./_assets/yarn
 
 PATH: 
-  /Users/niranjan/.nvm/versions/node/v9.2.0/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/niranjan/nuxd.github.io/node_modules/.bin:/Users/niranjan/.nvm/versions/node/v9.2.0/bin:/usr/local/bin:/Users/niranjan/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/Niranjan/dezaen.github.io/node_modules/.bin:/usr/local/opt/ruby/bin:/usr/local/opt/gettext/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
-  1.10.1
+  1.15.2
 
 Node version: 
-  9.2.0
+  11.10.1
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, lstat '/Users/niranjan/nuxd.github.io/_assets/yarn/mkdirp'
+  Error: ENOENT: no such file or directory, lstat '/Users/Niranjan/dezaen.github.io/_assets/yarn/mkdirp'
 
 npm manifest: 
   {
     "name": "chalk",
     "scripts": {
       "setup": "bin/setup",
-      "local": "bundle exec jekyll serve --drafts",
+      "local": "bundle exec jekyll serve",
       "publish": "bin/deploy"
     },
     "dependencies": {
