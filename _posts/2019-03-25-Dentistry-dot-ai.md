@@ -58,7 +58,7 @@ partials:
   - name    : section-content
     columns :
         - column      : col-md-8 col-sm-12
-          heading     : That's all.
+          heading     : Uh oh!
           description : |
-            Thanks you for checking this project. Due to confidentiality of this project. Above is all I can share with you right now. However, If you are someone who would want to have full access to this project. Please write an email to me at <a href="mailto:niranjangupta.jun3@gmail.com?subject=Need full access of Dentistry.ai" class="">Niranjangupta.jun3@gmail.com</a>.
+            This project is under NDA( non-disclosure agreement ), due to which I can't share all the details in the public domain. However, if you are a recruiter or someone who wants to learn more about my work on this project, please write an email to me at <a href="mailto:niranjangupta.jun3@gmail.com?subject=Need full access of Dentistry.ai" class="">niranjangupta.jun3@gmail.com</a>.
 ---

@@ -16,7 +16,7 @@ partials:
         - column      : col-md-8 col-sm-12
           heading     : About
           description : |
-            Elucidata is a Biotech company which enables scientists to find drug target, during the early stage of a drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions, and pharmaceutical companies. It's product, Polly<sup>TM</sup> is one stop solutions for analyzing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
+            Elucidata is a Biotech company which enables scientists to find drug target, during the early stage of a drug discovery process. It does so by bringing insights from experiments carried out by scientists at different labs, academic institutions, and pharmaceutical companies. Its product, Polly<sup>TM</sup> is one stop solutions for analyzing Metabolomic data. They are also planning to foray into other Omics data. Check out their website for more product updates.
           website     : http://www.elucidata.io
   
   - name    : section-content
@@ -124,7 +124,7 @@ partials:
         - column      : col-md-6 col-sm-12
           heading     : Typography
           description : 
-            I went through various typefaces on google fonts, as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content-heavy pages. Like Website, Blogs, Letterhead, Slides etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product a unique personality and fulfilled all the need of any professional quality typeface. Merriweather, on the other hand, gelled perfectly with it and looked beautiful at all different sizes.
+            I went through various typefaces on google fonts, as I wanted to pick a unique sans-serif typeface for UI of the product and Serif typeface for the content-heavy pages. Like Website, Blogs, Letterhead, Slides, etc. I choose Heebo and Merriweather. Heebo is an optically corrected typeface which is similar to Roboto. You will notice the difference only in use. It gave the product a unique personality and fulfilled all the need of any professional quality typeface. Merriweather, on the other hand, gelled perfectly with it and looked beautiful at all different sizes.
 
         - column      : col-md-12
           image       : elucidata-branding/type-exploration.png
@@ -140,7 +140,7 @@ partials:
             - column      : col-md-12 
               heading     : Brand colors
               description :
-                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achieve this I looked at more than 100 Biotech companies on Angellist and observed that there were very few companies which were using shades of purple. As purple closely resembles with most of the words above. After trying out different contrasts and shades of purple. We settled down with the below palette.
+                During our discussion the stakeholders wanted the brand to speak for simplicity, seriousness, trust, cutting edge and freshness. To achieve this I looked at more than 100 Biotech companies on Angellist and observed that there were very few companies which were using shades of purple. As purple closely resembles most of the words above. After trying out different contrasts and shades of purple. We settled down with the below palette.
 
         - column          : col-md-12
           child           : 
@@ -196,11 +196,11 @@ partials:
 
         - column      : col-md-6 col-sm-12
           subheading  : Inclusion
-          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were helpful in finalizing the design. Once the logo was finalized. We showed it to everyone and asked for their feedback. Most of them liked it and wanted to know the rationale behind the choice of color, font, and shape etc. This exercise sparked a dialog between the teams and we had some fresh suggestions. Out of which a few made to our final tweaks.
+          description : This project helped me understand the value of inclusion from different stakeholders. As their feedback were helpful in finalizing the design. Once the logo was finalized. We showed it to everyone and asked for their feedback. Most of them liked it and wanted to know the rationale behind the choice of color, font, and shape, etc. This exercise sparked a dialog between the teams and we had some fresh suggestions. Out of which a few made to our final tweaks.
 
         - column      : col-md-6 col-sm-12
           subheading  : Brand strategy
-          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of the project, and helped me answer the questions like "How will the logo be used in a certain context?" We primarily focused on Print and Digital media. In Print we had to consider the design of product sheets, leaflets, scientific posters, visiting card and in Digital media we had website, product, social media, emailers, slides, and design system etc.
+          description : I learned about brand strategy in the process of designing the logo. My mentor helped me see the bigger picture of the project, and helped me answer the questions like "How will the logo be used in a certain context?" We primarily focused on Print and Digital media. In Print we had to consider the design of product sheets, leaflets, scientific posters, visiting card and in Digital media we had website, product, social media, emailers, slides, and design system, etc.
 
 
   - name    : section-image-full-width
