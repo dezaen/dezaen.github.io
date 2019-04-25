@@ -193,3 +193,7 @@ section{
 h1 .letter {
   display: inline-block;
 }
+
+html.sr .reveal {
+    visibility: hidden;
+}
