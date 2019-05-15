@@ -24,8 +24,11 @@ svg {
 
 ul,
 ol {
-  padding-left: 40px;
+  padding-left: 17px;
   margin: 0;
+  li{
+    margin-bottom:8px;
+  }
 }
 
 abbr {
@@ -183,7 +186,7 @@ section{
   h2, h3, h4 {
     color: #ffffff;
   }
-  p {
+  p, ol, ul {
     color: rgba(255,255,255,0.7);
   }
 }
