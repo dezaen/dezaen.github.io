@@ -1,3 +1,9 @@
 <section class="{{include.elements.class}}">
-<img class="full-width reveal" src="{% asset '{{ include.elements.image }}' @path %}" alt="{{include.elements.alt}}" >
+	{% if include.elements.heading %}<div class="container">
+		<div class="row">
+			<h2>{{include.elements.heading}}</h2>
+		</div>
+	</div>
+	{% endif %}
+	<img class="full-width reveal" src="{% asset '{{ include.elements.image }}' @path %}" alt="{{include.elements.alt}}" >
 </section>

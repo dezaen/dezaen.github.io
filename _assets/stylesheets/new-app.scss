@@ -181,7 +181,21 @@ section{
 }
 
 .bg_black {
-  background-color:#222222;
+  background-color:#181717;
+
+  h2, h3, h4 {
+    color: #FB7F0E;
+  }
+  p, ol, ul {
+    color: rgba(255,255,255,0.7);
+  }
+  .info-item {
+    margin-bottom: 88px;
+  }
+}
+
+.bg_purple{
+  background-color:#7672C4;
 
   h2, h3, h4 {
     color: #ffffff;
@@ -191,7 +205,9 @@ section{
   }
 }
 
-
+.detailed-screens h2, .detailed-screens .screen{
+      margin-bottom: 64px;
+}
 
 h1 .letter {
   display: inline-block;

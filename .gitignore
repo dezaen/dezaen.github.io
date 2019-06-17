@@ -4,3 +4,4 @@ _site/
 .jekyll-metadata
 .DS_Store
 yran-error.log
+Gemfile.lock
