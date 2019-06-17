@@ -2,7 +2,7 @@
 layout: post
 title: "Elucidata branding"
 description: "Identity design, branding and more"
-thumb_image: "elucidata-branding/hero.png"
+image: "elucidata-branding/hero.png"
 tags: [branding]
 
 partials:

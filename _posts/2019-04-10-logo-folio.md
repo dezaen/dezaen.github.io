@@ -2,7 +2,7 @@
 layout: post
 title: "Logo folio"
 description: "Best of the logo designed till date"
-thumb_image: "logo-folio/folio-thumbnail.png"
+image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 
 partials:

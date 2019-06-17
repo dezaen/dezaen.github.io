@@ -2,7 +2,7 @@
 layout: post
 title: "Dentistry.ai"
 description: "AI Powered caries detection tool"
-thumb_image: "dentistry-case-study/dentistry-hero.png"
+image: "dentistry-case-study/dentistry-hero.png"
 tags: [UX]
 
 partials:

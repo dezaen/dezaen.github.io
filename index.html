@@ -1,7 +1,11 @@
 ---
 layout: default
-title: "User Experience Designer from New Delhi, India."
-description: "A UX Designer with more than 5 Years of experience in Product Design, Branding, Graphic Design and building startups"
+
+title: "Portfolio of Niranjan Gupta"
+
+description: "Niranjan Gupta is an experienced designer and has around 6 years of industry experience. He has designed UI/UX, Brand guidelines, Digital Products, Websites, Apps, Digital Experiences and helped build successful startups."
+
+image : "niranjan-gupta.png"
 ---
 
 {% for post in paginator.posts %}
@@ -12,7 +16,7 @@ description: "A UX Designer with more than 5 Years of experience in Product Desi
       <h3>{{ post.title }}</h3>
       <p>{{post.description}}</p>
       <span class="tag"></span>
-      <img class="project-thumbnail" src="{% asset {{post.thumb_image}} @path %}" alt="{{post.thumb_image.alt}}" />
+      <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
     </div>
   </a>
 </div>
