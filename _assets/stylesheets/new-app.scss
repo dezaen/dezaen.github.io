@@ -94,7 +94,7 @@ img.emoji{
 
 
 /* type colors */
-.muted-text{  color: $light-gray;}
+.muted-text{  color: $gray;}
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -222,4 +222,27 @@ h1 .letter {
 
 html.sr .reveal {
     visibility: hidden;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.btn-outline {
+    color: $brand-primary;
+    padding: 8px 16px;
+    border: 1px solid $brand-primary;
+    border-radius: 4px;
+    transition: color $base-transition-speed linear;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $brand-primary;
+      color: #fff;
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.10);
+      box-shadow: 2px 4px 2px rgba(0,0,0,0.10);
+    }
+}
+.nav{
+    justify-content: flex-end;
 }
