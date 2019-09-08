@@ -128,27 +128,6 @@ partials:
               image       : dentistry-case-study/compare-scans-dashboard.png
               alt         : Dentistry user flow image
 
-  - name        : section-image-slider
-    class       : slider
-    id          : slider
-    controls    : false
-    indicators  : false
-    carousel                        :
-        -   item                    :
-            image-url               : dentistry-case-study/compare-scans-dashboard.png
-            image-alt               : compare scans dashboard
-            
-        -   item                    :
-            image-url               : dentistry-case-study/compare-scans-dashboard.png
-            image-alt               : compare scans dashboard
-            
-        -   item                    :
-            image-url               : dentistry-case-study/compare-scans-dashboard.png
-            image-alt               : compare scans dashboard
-            
-
-
-
 
   - name    : section-content
     class   : bg_black
