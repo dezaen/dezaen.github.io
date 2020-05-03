@@ -15,14 +15,25 @@
     <section class="intro">
       <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-12">
               <div class="row">
-                <div class="col-md-7 col-sm-12">
-                  <h1 class="text-reveal-left">Hi, I am Niranjan. A Product Designer from New Delhi, India.</h1>
-                  I have been working in the design industry for about 6 years now and I have made peace with the fact that Design’s main job is to simplify things, make things live longer, and help make humans live a happier life. It is something which needs a balance of both creative and analytic side of my brain. My works are heavily inspired by Dieter Ram’s and John Maeda’s principles around simplicity. I am a curious soul who wants to know who, how, what, and why behind everything around me. 
+                <div class="col-md-5 col-sm-12 pull-right">
+                  <img class="img-fluid" src="{% asset 'profile.jpg' @path %}" alt="niranjan gupta">
                 </div>
-                <div class="col-md-5 col-sm-6">
-                  <img class="img-fluid" src="{% asset 'niranjan-gupta.png' @path %}" alt="niranjan gupta">
+
+                <div class="col-md-7 col-sm-12">
+                  <h1 class="text-reveal-left">Hi! I'm Niranjan. A Product Designer from New Delhi, India.</h1>
+                  <p>I have been working in the design industry for more than 6 years now and I have made peace with the fact that Design’s main job is to simplify things, make it live longer, and help make humans live a happier life. It is something which needs a balance of both creative and analytic side of my brain. <br><br>My work is heavily inspired by Dieter Ram’s and John Maeda’s principles around simplicity. I am a curious soul who wants to know who, how, what, and why behind everything around me.</p> <br>
+
+                  <ul class="list-inline reveal">
+                    <li class="list-inline-item">
+                      <a class="button-primary" target="_blank" href="mailto:niranjangupta.jun3@gmail.com">Contact</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="button-primary" target="_blank" href="https://docs.google.com/document/d/1Tdes1nEi_3ktiIYXuW13wT9Pqc2YzIExaYhAD6LU_e4/edit?usp=sharing">Resumé</a>
+                    </li>
+                  </ul>
+                  <!-- <p><a href="mailto:niranjangupta.jun3@gmail.com" class="link" target="_blank">Email</a>&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/document/d/1Tdes1nEi_3ktiIYXuW13wT9Pqc2YzIExaYhAD6LU_e4/edit?usp=sharing" class="link" target="_blank">Resumé</a></p> -->
                 </div>
               </div>
             </div>
@@ -34,18 +45,9 @@
     <section class="projects">
       <div class="container">
           <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <h2>Selected Projects</h2>
-            </div>
-          </div>
-
-          <div class="scroll">    
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="row">
-                  {{ content }}
-                </div>
-              </div>
+            <div class="col-md-12">
+              <h3>Selected Projects</h3>
+              <div class="row ">{{ content }}</div>
             </div>
           </div>
       </div>
@@ -56,13 +58,13 @@
       {% include footer.html %}
     </section>
     
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
           <p class="muted-text">Designed and Developed with love by Niranjan Gupta</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="cui-embed" data-cui-uid="fdAiVm" data-cui-avatar="https://images.typeform.com/images/aAjuNNVrx3it" data-cui-mode="pill" data-cui-pill-button-color="#4D6AE9"></div><script src="https://public-assets.typeform.com/confab/embed.js" async></script> -->
   {% include javascripts.html %}
 </body>

@@ -49,13 +49,12 @@ h6 {
   line-height: 1.2;
   text-rendering: optimizeLegibility;
   color: $black;
-  font-weight: $base-font-weight-thin;
+  font-weight: $base-font-weight;
 }
 
 h1 {
   font-size: $base-font-size * 3;
   letter-spacing: -.03em;
-  font-weight: $base-font-weight-thin;
 }
 
 h2 {
@@ -163,16 +162,4 @@ img.emoji{
 ::selection {
   color: $white;
   background-color: $gray-darkest;
-}
-
-.button-default {
-  background-color: #5324b7;
-  padding: 8px 12px;
-  color: #fff;
-  margin: 60px 0 0;
-  display: inline-block;
-}
-.button-default:hover {
-  background-color: #5324b7;
-  color: #fff;
 }

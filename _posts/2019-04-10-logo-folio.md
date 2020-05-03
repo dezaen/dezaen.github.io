@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Logo folio"
-description: "Best of the logo designed till date"
+title: "Logo Folio"
+description: "A set of the best identity design done by me so far."
 image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 

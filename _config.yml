@@ -22,12 +22,12 @@ show_drafts: false
 
 scrollappear_enabled: false # Change to false to disable
 social:
-  dribbble: niran_jan # Add your Dribbble handle
+  dribbble: # niran_jan Add your Dribbble handle
   github: # Add your GitHub handle
-  linkedin: niranjan-jun3 # Add your LinkedIn handle
+  linkedin: # niranjan-jun3 Add your LinkedIn handle
   facebook: # Add your Facebook handle
   flickr: # Add your Flickr handle
-  twitter: # Add your Twitter handle
+  twitter: # niran_jan Add your Twitter handle
   email: # Add your Email address
   bitcoin: # Add your Bitcoin link or address
   ethereum: # Add your Ethereum link or address

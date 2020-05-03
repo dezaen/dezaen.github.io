@@ -80,18 +80,65 @@ img.emoji{
 }
 
 .button-default {
-  background-color: #5324b7;
+  background-color: $brand-primary;
   padding: 8px 12px;
   color: #fff;
   margin: 60px 0 0;
   display: inline-block;
-}
-.button-default:hover {
-  background-color: #5324b7;
-  color: #fff;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $base-accent-highlighted-color;
+    color: #fff;
+  }
 }
 
+.button-primary{
+  background-color: $brand-primary;
+  color: $white;
+  font-size: 16px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $base-accent-highlighted-color;
+    color: #fff;
+  }
+}
 
+.button-secondary{
+  background-color: $white;
+  color: $brand-primary;
+  border: 1px solid $brand-primary;
+  font-size: 16px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $base-accent-highlighted-color;
+    color: #fff;
+  } 
+}
+
+.btn-outline {
+    color: $brand-primary;
+    padding: 8px 16px;
+    border: 1px solid $brand-primary;
+    border-radius: 4px;
+    transition: color $base-transition-speed linear;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $brand-primary;
+      color: #fff;
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.10);
+      box-shadow: 2px 4px 2px rgba(0,0,0,0.10);
+    }
+}
 
 /* type colors */
 .muted-text{  color: $gray;}
@@ -104,28 +151,20 @@ img.emoji{
   padding: 40px 0;
 }
 .intro{
+  padding: 0;
   margin-bottom: 80px;
 }
+
+.intro hr{
+  margin:24px 0;
+}
+
 .projects{
-  background-color: #FFE2DC;
-  padding: 96px 0;
-  h2 {
+  background-color: #f1f1f1;
+  h3 {
     margin: $margin-b-l;
   }
 }
-
-.scroll {
-  /*overflow: auto;
-    overflow-x: scroll;*/
-}
-.scroll > .row{
-  /*width: 1600px;*/
-  /*overflow: auto;
-  overflow-x: scroll;*/
-/*    margin: 30px;
-    padding: 8px 0 8px 32px;*/
-}
-/*.scroll-right{ width: 1000000px; height: 1px; }*/
 
 .project-card{
   padding: 24px;
@@ -140,16 +179,7 @@ img.emoji{
   padding: 16px 0;
   display: block;
 }
-.elsewhere a{
-  width: 32px;
-  height: 32px;
-  background-color: #3A58F6;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 8px;
-  text-align: center;
-  text-decoration: none;
-}
+
 section{
   padding:90px 0
 }
@@ -222,25 +252,10 @@ html.sr .reveal {
     visibility: hidden;
 }
 
-.full-width{
+.full-width, .img-fluid{
   width: 100%;
 }
 
-.btn-outline {
-    color: $brand-primary;
-    padding: 8px 16px;
-    border: 1px solid $brand-primary;
-    border-radius: 4px;
-    transition: color $base-transition-speed linear;
-    &:hover,
-    &:active,
-    &:focus {
-      background: $brand-primary;
-      color: #fff;
-      text-shadow: 1px 1px 0px rgba(0,0,0,0.10);
-      box-shadow: 2px 4px 2px rgba(0,0,0,0.10);
-    }
-}
 .nav{
     justify-content: flex-end;
 }
