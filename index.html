@@ -9,7 +9,7 @@ image : "niranjan-gupta.png"
 ---
 
 {% for post in paginator.posts %}
-<div class="col-md-4 col-sm-6">
+<div class="col-12 col-lg-4">
   <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
     <div class="project-card reveal">
       <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
