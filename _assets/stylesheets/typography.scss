@@ -1,8 +1,8 @@
 // Typography
 // =============================================================================
 
-$sans-serif: "Abel", Arial, sans-serif;
-$serif: "Merriweather", serif;
+$sans-serif: 'Oswald', sans-serif;
+$serif: 'Merriweather', serif;
 $base-font-family: $sans-serif;
 $base-font-weight: 400;
 $base-font-weight-bold: 500;
@@ -10,25 +10,35 @@ $base-font-weight-thin: 300;
 
 // Font sizes
 $base-font-size: 8px;
-$base-line-height: 1.4;
+$base-line-height: 1.8;
 
 
-html {
-  font-size: $base-font-size * 2.3;
+html, html::selection {
+  font-size: $base-font-size * 2;
 }
 
 body {
   margin: 0 auto;
-  font-family: $base-font-family;
+  font-family: $serif;
   -webkit-font-smoothing: antialiased;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
-  color: $light-charcoal;
+  color: $charcoal;
   background: $white;
 }
 
+::-moz-selection {
+  background-color: rgba(58, 88, 246, 0.16) !important;
+  color: rgb(58, 88, 246) !important;
+}
+
+::selection {
+  background-color: rgba(58, 88, 246, 0.16);
+  color: rgb(58, 88, 246);
+}
+
 p {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $light-charcoal;
@@ -45,12 +55,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:$serif;
+  font-family:$sans-serif;
   margin: 0 0 16px;
   line-height: $base-line-height;
   text-rendering: optimizeLegibility;
   color: $charcoal;
   font-weight: $base-font-weight;
+  letter-spacing:0.4px;
+  color: $primary-color;
+  text-transform:uppercase;
 }
 
 h1 {
@@ -91,7 +104,7 @@ h4 {
 a {
   color: $brand-primary;
   text-decoration: none;
-  font-weight: $base-font-weight-bold;
+  font-weight: 700;
   transition: color $base-transition-speed linear;
   &:hover,
   &:active {

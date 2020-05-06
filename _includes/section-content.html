@@ -4,7 +4,7 @@
     {% for attr in include.elements.columns %}
       <div class="{{attr.column}}">
           {% if attr.heading %} <h2>{{attr.heading}}</h2> {% endif %}
-          {% if attr.subheading %}<h4>{{attr.subheading}}</h4> {% endif %}
+          {% if attr.subheading %} <h4>{{attr.subheading}}</h4> {% endif %}
           {% if attr.image %} <img class="reveal" src="{% asset '{{attr.image}}' @path %}" alt="{{attr.alt}}"> {% endif %}
           {% if attr.description %} <p>{{attr.description}}</p> {% endif %}
           {% if attr.website %} <a href="{{attr.website}}" class="link">Visit website</a> {% endif %}

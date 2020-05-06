@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Elucidata Branding"
-description: "Did the Identity, Branding, and Website Design excercise for Elucidata."
+intro: "Identity, Branding, and Website Design for Elucidata."
+brief: "Fresh me, ready to put a dent in Biotech"
 image: "elucidata-branding/hero.png"
 tags: [branding]
 

@@ -14,7 +14,7 @@ image : "niranjan-gupta.png"
     <div class="project-card reveal">
       <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
       <h4>{{ post.title }}</h4>
-      <p>{{post.description}}</p>
+      <p>{{ post.intro }}</p>
       <span class="tag"></span>
       <span class="card-access-icon"></span>
     </div>

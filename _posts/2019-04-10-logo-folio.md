@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Logo Folio"
-description: "A set of the best identity design done by me so far."
+intro: "A collection of identities designed so far"
+brief: "Simple, elegant and timeless shapes"
 image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 
