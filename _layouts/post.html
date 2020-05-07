@@ -22,6 +22,31 @@
         {% endfor %}
     </section>
     <hr>
+    <section class="bg_gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-12">
+            <h3>Other selected projects</h3>
+          </div>
+          {% for post in site.posts %}
+           {% if post.url != page.url %}
+            <div class="col-12 col-lg-4">
+              <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                <div class="project-card reveal">
+                  <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
+                  <h4>{{ post.title }}</h4>
+                  <p>{{ post.intro }}</p>
+                  <span class="tag"></span>
+                  <span class="card-access-icon"></span>
+                </div>
+              </a>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+    </section>
+    <hr>
     <!-- foooter -->
     {% include footer.html %}
     <!-- scripts -->
