@@ -9,9 +9,10 @@ Thumbs.db
 /_assets/yarn/
 /_site/
 /.jekyll-cache/
-Gemfile.lock
-package-lock.json
-yarn.lock
+/node_modules/
 .idea
 .jekyll-metadata
-/node_modules
+Gemfile.lock
+package-lock.json
+yarn-error.log
+yarn.lock
