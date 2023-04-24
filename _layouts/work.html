@@ -1,0 +1,24 @@
+{% for item in page.partials %}
+  {% include {{item.name}}.html
+    spaced=item.spaced
+    padded=item.padded
+    src=item.src
+    title=item.title
+    body=item.body
+    link=item.link
+    href=item.href
+    gutter=item.gutter
+    stack=item.stack
+    poster=item.poster
+    content=item.content
+    bgcolor=item.bgcolor
+    bgimg=item.bgimg
+    color=item.color
+    columnwidth=item.columnwidth
+    centred=item.centred
+    cite=item.cite
+    attribute=item.attribute
+    id=item.id
+    size=item.size
+    contained=item.contained %}
+{% endfor %}

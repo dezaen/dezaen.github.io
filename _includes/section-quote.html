@@ -1,0 +1,13 @@
+<section class="{{include.elements.class}}">
+<div class="container">
+  <div class="row">
+    {% for attr in include.elements.columns %}
+      <div class="{{attr.column}}">
+          {% if attr.quote %} <h3>{{attr.quote}}</h3> {% endif %}
+          {% if attr.description %} <p>{{attr.description}}</p> {% endif %}
+          {% if attr.link %} <br/> <a href="{{attr.link}}" class="link btn-outline" >{{attr.link-text}}</a> {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
