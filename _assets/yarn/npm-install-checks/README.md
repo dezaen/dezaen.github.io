@@ -1,27 +1,28 @@
 # npm-install-checks
 
-A package that contains checks that npm runs during the installation.
+Check the engines and platform fields in package.json
 
 ## API
 
-### .checkEngine(target, npmVer, nodeVer, force, strict, cb)
-Check if node/npm version is supported by the package. If not
-strict and it isn't supported, `cb` is called with the error
-object as its second argument.
+Both functions will throw an error if the check fails, or return
+`undefined` if everything is ok.
 
-Error type: `ENOTSUP`
+Errors have a `required` and `current` fields.
 
-### .checkPlatform(target, force, cb)
-Check if OS/Arch is supported by the package.
+### .checkEngine(pkg, npmVer, nodeVer, force = false)
 
-Error type: `EBADPLATFORM`
+Check if a package's `engines.node` and `engines.npm` match the running system.
 
-### .checkCycle(target, ancestors, cb)
-Check for cyclic dependencies.
+`force` argument will override the node version check, but not the npm
+version check, as this typically would indicate that the current version of
+npm is unable to install the package properly for some reason.
 
-Error type: `ECYCLE`
+Error code: 'EBADENGINE'
 
-### .checkGit(folder, cb)
-Check if a folder is a .git folder.
+### .checkPlatform(pkg, force)
 
-Error type: `EISGIT`
+Check if a package's `os`, `cpu` and `libc` match the running system.
+
+`force` argument skips all checks.
+
+Error code: 'EBADPLATFORM'

@@ -10,6 +10,7 @@ gem "jekyll-sitemap"
 gem "jemoji"
 gem "mini_magick"
 gem "sass"
-gem "sprockets"
+gem "sprockets",  "~> 3.7"
 gem "uglifier"
 gem 'jekyll-seo-tag'
+gem "kramdown-parser-gfm"

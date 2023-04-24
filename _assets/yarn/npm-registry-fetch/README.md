@@ -1,4 +1,4 @@
-# npm-registry-fetch [![npm version](https://img.shields.io/npm/v/npm-registry-fetch.svg)](https://npm.im/npm-registry-fetch) [![license](https://img.shields.io/npm/l/npm-registry-fetch.svg)](https://npm.im/npm-registry-fetch) [![Travis](https://img.shields.io/travis/npm/npm-registry-fetch/latest.svg)](https://travis-ci.org/npm/npm-registry-fetch) [![AppVeyor](https://img.shields.io/appveyor/ci/zkat/npm-registry-fetch/latest.svg)](https://ci.appveyor.com/project/npm/npm-registry-fetch) [![Coverage Status](https://coveralls.io/repos/github/npm/npm-registry-fetch/badge.svg?branch=latest)](https://coveralls.io/github/npm/npm-registry-fetch?branch=latest)
+# npm-registry-fetch
 
 [`npm-registry-fetch`](https://github.com/npm/npm-registry-fetch) is a Node.js
 library that implements a `fetch`-like API for accessing npm registry APIs
@@ -50,6 +50,25 @@ Happy hacking!
 
 ### API
 
+#### Caching and `write=true` query strings
+
+Before performing any PUT or DELETE operation, npm clients first make a
+GET request to the registry resource being updated, which includes
+the query string `?write=true`.
+
+The semantics of this are, effectively, "I intend to write to this thing,
+and need to know the latest current value, so that my write can land
+cleanly".
+
+The public npm registry handles these `?write=true` requests by ensuring
+that the cache is re-validated before sending a response.  In order to
+maintain the same behavior on the client, and not get tripped up by an
+overeager local cache when we intend to write data to the registry, any
+request that comes through `npm-registry-fetch` that contains `write=true`
+in the query string will forcibly set the `prefer-online` option to `true`,
+and set both `prefer-offline` and `offline` to false, so that any local
+cached value will be revalidated.
+
 #### <a name="fetch"></a> `> fetch(url, [opts]) -> Promise<Response>`
 
 Performs a request to a given URL.
@@ -82,26 +101,32 @@ const res = await fetch.json('/-/ping')
 console.log(res) // Body parsed as JSON
 ```
 
+#### <a name="fetch-json-stream"></a> `> fetch.json.stream(url, jsonPath, [opts]) -> Stream`
+
+Performs a request to a given registry URL and parses the body of the response
+as JSON, with each entry being emitted through the stream.
+
+The `jsonPath` argument is a [`JSONStream.parse()`
+path](https://github.com/dominictarr/JSONStream#jsonstreamparsepath), and the
+returned stream (unlike default `JSONStream`s), has a valid
+`Symbol.asyncIterator` implementation.
+
+For available options, please see the section on [`fetch` options](#fetch-opts).
+
+##### Example
+
+```javascript
+console.log('https://npm.im/~zkat has access to the following packages:')
+for await (let {key, value} of fetch.json.stream('/-/user/zkat/package', '$*')) {
+  console.log(`https://npm.im/${key} (perms: ${value})`)
+}
+```
+
 #### <a name="fetch-opts"></a> `fetch` Options
 
 Fetch options are optional, and can be passed in as either a Map-like object
 (one with a `.get()` method), a plain javascript object, or a
 [`figgy-pudding`](https://npm.im/figgy-pudding) instance.
-
-##### <a name="opts-auth-token"></a> `opts._authToken`
-
-* Type: String
-* Default: null
-
-Authentication token string.
-
-Can be scoped to a registry by using a "nerf dart" for that registry. That is:
-
-```
-{
-  '//registry.npmjs.org/:_authToken': 't0k3nH34r'
-}
-```
 
 ##### <a name="opts-agent"></a> `opts.agent`
 
@@ -150,7 +175,7 @@ to trust only that specific signing authority.
 Multiple CAs can be trusted by specifying an array of certificates instead of a
 single string.
 
-See also [`opts.strict-ssl`](#opts-strict-ssl), [`opts.ca`](#opts-ca) and
+See also [`opts.strictSSL`](#opts-strictSSL), [`opts.ca`](#opts-ca) and
 [`opts.key`](#opts-key)
 
 ##### <a name="opts-cache"></a> `opts.cache`
@@ -163,8 +188,8 @@ will be cached according to [IETF RFC 7234](https://tools.ietf.org/html/rfc7234)
 rules. This will speed up future requests, as well as make the cached data
 available offline if necessary/requested.
 
-See also [`offline`](#opts-offline), [`prefer-offline`](#opts-prefer-offline),
-and [`prefer-online`](#opts-prefer-online).
+See also [`offline`](#opts-offline), [`preferOffline`](#opts-preferOffline),
+and [`preferOnline`](#opts-preferOnline).
 
 ##### <a name="opts-cert"></a> `opts.cert`
 
@@ -185,7 +210,7 @@ It is _not_ the path to a certificate file (and there is no "certfile" option).
 
 See also: [`opts.ca`](#opts-ca) and [`opts.key`](#opts-key)
 
-##### <a name="opts-fetch-retries"></a> `opts.fetch-retries`
+##### <a name="opts-fetchRetries"></a> `opts.fetchRetries`
 
 * Type: Number
 * Default: 2
@@ -196,7 +221,7 @@ packages from the registry.
 See also [`opts.retry`](#opts-retry) to provide all retry options as a single
 object.
 
-##### <a name="opts-fetch-retry-factor"></a> `opts.fetch-retry-factor`
+##### <a name="opts-fetchRetryFactor"></a> `opts.fetchRetryFactor`
 
 * Type: Number
 * Default: 10
@@ -207,7 +232,7 @@ packages.
 See also [`opts.retry`](#opts-retry) to provide all retry options as a single
 object.
 
-##### <a name="opts-fetch-retry-mintimeout"></a> `opts.fetch-retry-mintimeout`
+##### <a name="opts-fetchRetryMintimeout"></a> `opts.fetchRetryMintimeout`
 
 * Type: Number
 * Default: 10000 (10 seconds)
@@ -218,7 +243,7 @@ packages.
 See also [`opts.retry`](#opts-retry) to provide all retry options as a single
 object.
 
-##### <a name="opts-fetch-retry-maxtimeout"></a> `opts.fetch-retry-maxtimeout`
+##### <a name="opts-fetchRetryMaxtimeout"></a> `opts.fetchRetryMaxtimeout`
 
 * Type: Number
 * Default: 60000 (1 minute)
@@ -229,6 +254,24 @@ packages.
 See also [`opts.retry`](#opts-retry) to provide all retry options as a single
 object.
 
+##### <a name="opts-forceAuth"></a> `opts.forceAuth`
+
+* Type: Object
+* Default: null
+
+If present, other auth-related values in `opts` will be completely ignored,
+including `alwaysAuth`, `email`, and `otp`, when calculating auth for a request,
+and the auth details in `opts.forceAuth` will be used instead.
+
+##### <a name="opts-gzip"></a> `opts.gzip`
+
+* Type: Boolean
+* Default: false
+
+If true, `npm-registry-fetch` will set the `Content-Encoding` header to `gzip`
+and use `zlib.gzip()` or `zlib.createGzip()` to gzip-encode
+[`opts.body`](#opts-body).
+
 ##### <a name="opts-headers"></a> `opts.headers`
 
 * Type: Object
@@ -237,6 +280,15 @@ object.
 Additional headers for the outgoing request. This option can also be used to
 override headers automatically generated by `npm-registry-fetch`, such as
 `Content-Type`.
+
+##### <a name="opts-ignoreBody"></a> `opts.ignoreBody`
+
+* Type: Boolean
+* Default: false
+
+If true, the **response body** will be thrown away and `res.body` set to `null`.
+This will prevent dangling response sockets for requests where you don't usually
+care what the response body is.
 
 ##### <a name="opts-integrity"></a> `opts.integrity`
 
@@ -257,14 +309,6 @@ previously-generated integrity hash for the saved request information, so
 `EINTEGRITY` errors can happen if [`opts.cache`](#opts-cache) is used, even if
 `opts.integrity` is not passed in.
 
-##### <a name='opts-is-from-ci'></a> `opts.is-from-ci`
-
-* Alias: `opts.isFromCI`
-* Type: Boolean
-* Default: Based on environment variables
-
-This is used to populate the `npm-in-ci` request header sent to the registry.
-
 ##### <a name="opts-key"></a> `opts.key`
 
 * Type: String
@@ -283,7 +327,7 @@ It is _not_ the path to a key file (and there is no "keyfile" option).
 
 See also: [`opts.ca`](#opts-ca) and [`opts.cert`](#opts-cert)
 
-##### <a name="opts-local-address"></a> `opts.local-address`
+##### <a name="opts-localAddress"></a> `opts.localAddress`
 
 * Type: IP Address String
 * Default: null
@@ -293,17 +337,17 @@ to the registry.
 
 See also [`opts.proxy`](#opts-proxy)
 
-##### <a name="opts-log"></a> `opts.log`
+##### <a name="opts-mapJSON"></a> `opts.mapJSON`
 
-* Type: [`npmlog`](https://npm.im/npmlog)-like
-* Default: null
+* Type: Function
+* Default: undefined
 
-Logger object to use for logging operation details. Must have the same methods
-as `npmlog`.
+When using `fetch.json.stream()` (NOT `fetch.json()`), this will be passed down
+to [`JSONStream`](https://npm.im/JSONStream) as the second argument to
+`JSONStream.parse`, and can be used to transform stream data before output.
 
-##### <a name="opts-maxsockets"></a> `opts.maxsockets`
+##### <a name="opts-maxSockets"></a> `opts.maxSockets`
 
-* Alias: `opts.max-sockets`
 * Type: Integer
 * Default: 12
 
@@ -317,22 +361,31 @@ Maximum number of sockets to keep open during requests. Has no effect if
 
 HTTP method to use for the outgoing request. Case-insensitive.
 
-##### <a name="opts-noproxy"></a> `opts.noproxy`
+##### <a name="opts-noProxy"></a> `opts.noProxy`
 
-* Type: Boolean
+* Type: String | String[]
 * Default: process.env.NOPROXY
 
-If true, proxying will be disabled even if [`opts.proxy`](#opts-proxy) is used.
+If present, should be a comma-separated string or an array of domain extensions
+that a proxy should _not_ be used for.
 
-##### <a name="opts-npm-session"></a> `opts.npm-session`
+##### <a name="opts-npmSession"></a> `opts.npmSession`
 
-* Alias: `opts.npmSession`
 * Type: String
 * Default: null
 
 If provided, will be sent in the `npm-session` header. This header is used by
 the npm registry to identify individual user sessions (usually individual
 invocations of the CLI).
+
+##### <a name="opts-npmCommand"></a> `opts.npmCommand`
+
+* Type: String
+* Default: null
+
+If provided, it will be sent in the `npm-command` header.  This header is
+used by the npm registry to identify the npm command that caused this
+request to be made.
 
 ##### <a name="opts-offline"></a> `opts.offline`
 
@@ -341,10 +394,13 @@ invocations of the CLI).
 
 Force offline mode: no network requests will be done during install. To allow
 `npm-registry-fetch` to fill in missing cache data, see
-[`opts.prefer-offline`](#opts-prefer-offline).
+[`opts.preferOffline`](#opts-preferOffline).
 
 This option is only really useful if you're also using
 [`opts.cache`](#opts-cache).
+
+This option is set to `true` when the request includes `write=true` in the
+query string.
 
 ##### <a name="opts-otp"></a> `opts.otp`
 
@@ -355,14 +411,27 @@ This is a one-time password from a two-factor authenticator. It is required for
 certain registry interactions when two-factor auth is enabled for a user
 account.
 
+##### <a name="opts-otpPrompt"></a> `opts.otpPrompt`
+
+* Type: Function
+* Default: null
+
+This is a method which will be called to provide an OTP if the server
+responds with a 401 response indicating that a one-time-password is
+required.
+
+It may return a promise, which must resolve to the OTP value to be used.
+If the method fails to provide an OTP value, then the fetch will fail with
+the auth error that indicated an OTP was needed.
+
 ##### <a name="opts-password"></a> `opts.password`
 
-* Alias: _password
+* Alias: `_password`
 * Type: String
 * Default: null
 
 Password used for basic authentication. For the more modern authentication
-method, please use the (more secure) [`opts._authToken`](#opts-auth-token)
+method, please use the (more secure) [`opts.token`](#opts-token)
 
 Can optionally be scoped to a registry by using a "nerf dart" for that registry.
 That is:
@@ -375,7 +444,7 @@ That is:
 
 See also [`opts.username`](#opts-username)
 
-##### <a name="opts-prefer-offline"></a> `opts.prefer-offline`
+##### <a name="opts-preferOffline"></a> `opts.preferOffline`
 
 * Type: Boolean
 * Default: false
@@ -387,7 +456,10 @@ will be requested from the server. To force full offline mode, use
 This option is generally only useful if you're also using
 [`opts.cache`](#opts-cache).
 
-##### <a name="opts-prefer-online"></a> `opts.prefer-online`
+This option is set to `false` when the request includes `write=true` in the
+query string.
+
+##### <a name="opts-preferOnline"></a> `opts.preferOnline`
 
 * Type: Boolean
 * Default: false
@@ -398,10 +470,11 @@ for updates immediately even for fresh package data.
 This option is generally only useful if you're also using
 [`opts.cache`](#opts-cache).
 
+This option is set to `true` when the request includes `write=true` in the
+query string.
 
-##### <a name="opts-project-scope"></a> `opts.project-scope`
+##### <a name="opts-scope"></a> `opts.scope`
 
-* Alias: `opts.projectScope`
 * Type: String
 * Default: null
 
@@ -430,25 +503,13 @@ using
 If the request URI already has a query string, it will be merged with
 `opts.query`, preferring `opts.query` values.
 
-##### <a name="opts-refer"></a> `opts.refer`
-
-* Alias: `opts.referer`
-* Type: String
-* Default: null
-
-Value to use for the `Referer` header. The npm CLI itself uses this to serialize
-the npm command line using the given request.
-
 ##### <a name="opts-registry"></a> `opts.registry`
 
 * Type: URL
 * Default: `'https://registry.npmjs.org'`
 
 Registry configuration for a request. If a request URL only includes the URL
-path, this registry setting will be prepended. This configuration is also used
-to determine authentication details, so even if the request URL references a
-completely different host, `opts.registry` will be used to find the auth details
-for that request.
+path, this registry setting will be prepended.
 
 See also [`opts.scope`](#opts-scope), [`opts.spec`](#opts-spec), and
 [`opts.<scope>:registry`](#opts-scope-registry) which can all affect the actual
@@ -496,7 +557,7 @@ If provided, can be used to automatically configure [`opts.scope`](#opts-scope)
 based on a specific package name. Non-registry package specs will throw an
 error.
 
-##### <a name="opts-strict-ssl"></a> `opts.strict-ssl`
+##### <a name="opts-strictSSL"></a> `opts.strictSSL`
 
 * Type: Boolean
 * Default: true
@@ -509,11 +570,26 @@ See also [`opts.ca`](#opts-ca).
 ##### <a name="opts-timeout"></a> `opts.timeout`
 
 * Type: Milliseconds
-* Default: 30000 (30 seconds)
+* Default: 300000 (5 minutes)
 
 Time before a hanging request times out.
 
-##### <a name="opts-user-agent"></a> `opts.user-agent`
+##### <a name="opts-authtoken"></a> `opts._authToken`
+
+* Type: String
+* Default: null
+
+Authentication token string.
+
+Can be scoped to a registry by using a "nerf dart" for that registry. That is:
+
+```
+{
+  '//registry.npmjs.org/:_authToken': 't0k3nH34r'
+}
+```
+
+##### <a name="opts-userAgent"></a> `opts.userAgent`
 
 * Type: String
 * Default: `'npm-registry-fetch@<version>/node@<node-version>+<arch> (<platform>)'`
@@ -526,7 +602,7 @@ User agent string to send in the `User-Agent` header.
 * Default: null
 
 Username used for basic authentication. For the more modern authentication
-method, please use the (more secure) [`opts._authToken`](#opts-auth-token)
+method, please use the (more secure) [`opts.authtoken`](#opts-authtoken)
 
 Can optionally be scoped to a registry by using a "nerf dart" for that registry.
 That is:
@@ -538,11 +614,3 @@ That is:
 ```
 
 See also [`opts.password`](#opts-password)
-
-##### <a name="opts-auth"></a> `opts._auth`
-
-* Type: String
-* Default: null
-
-** DEPRECATED ** This is a legacy authentication token supported only for
-*compatibility. Please us [`opts._authToken`](#opts-auth-token) instead.

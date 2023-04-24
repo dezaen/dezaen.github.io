@@ -1,6 +1,6 @@
 {
   "name": "is-cidr",
-  "version": "2.0.7",
+  "version": "4.0.2",
   "description": "Check if a string is an IP address in CIDR notation",
   "author": "silverwind <me@silverwind.io>",
   "contributors": [
@@ -12,10 +12,11 @@
     "test": "make test"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "cidr",
@@ -25,15 +26,21 @@
     "prefix",
     "prefixes",
     "ip",
-    "ip address"
+    "ip address",
+    "network"
   ],
-  "devDependencies": {
-    "eslint": "^5.6.0",
-    "eslint-config-silverwind": "^2.0.9",
-    "updates": "^4.3.0",
-    "ver": "^2.0.1"
-  },
   "dependencies": {
-    "cidr-regex": "^2.0.10"
+    "cidr-regex": "^3.1.1"
+  },
+  "devDependencies": {
+    "eslint": "7.10.0",
+    "eslint-config-silverwind": "18.0.10",
+    "jest": "26.4.2",
+    "updates": "11.1.5",
+    "versions": "8.4.3"
+  },
+  "jest": {
+    "verbose": false,
+    "testTimeout": 10000
   }
 }
