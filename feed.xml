@@ -1,20 +1,42 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Niranjan Gupta</title>
+    <description></description>
+    <link>https://dezaen.github.io</link>
+    <atom:link href="https://dezaen.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Nidra – A smart sleeping POD for busy Indians</title>
+        <description></description>
+        <pubDate>Wed, 10 Mar 2021 00:00:00 +0530</pubDate>
+        <link>https://dezaen.github.io/posts/sleeping-box</link>
+        <guid isPermaLink="true">https://dezaen.github.io/posts/sleeping-box</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Polly&lt;sup&gt;TM&lt;/sup&gt; – A cloud platform for finding metabolomic biomarkers</title>
+        <description></description>
+        <pubDate>Mon, 22 Apr 2019 00:00:00 +0530</pubDate>
+        <link>https://dezaen.github.io/posts/polly-mvp</link>
+        <guid isPermaLink="true">https://dezaen.github.io/posts/polly-mvp</guid>
+      </item>
+    
+      <item>
+        <title>Elucidata – Identity &amp; Branding</title>
+        <description></description>
+        <pubDate>Mon, 15 Apr 2019 00:00:00 +0530</pubDate>
+        <link>https://dezaen.github.io/posts/elucidata-branding</link>
+        <guid isPermaLink="true">https://dezaen.github.io/posts/elucidata-branding</guid>
+      </item>
+    
+      <item>
+        <title>Logo Folio - A collection of identities designed for various companies</title>
+        <description></description>
+        <pubDate>Wed, 10 Apr 2019 00:00:00 +0530</pubDate>
+        <link>https://dezaen.github.io/posts/logo-folio</link>
+        <guid isPermaLink="true">https://dezaen.github.io/posts/logo-folio</guid>
+      </item>
+    
   </channel>
 </rss>
