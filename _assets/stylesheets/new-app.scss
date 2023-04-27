@@ -39,7 +39,7 @@ abbr {
 blockquote {
   padding: 0 0 4px 15px;
   margin: 0 0 0 -20px;
-  font-family: $sans-serif;
+  font-family: $body-font;
   font-size: 20px;
   font-style: italic;
   line-height: 1.6;
@@ -77,14 +77,14 @@ img.emoji{
 .button-default {
   background-color: $brand-primary;
   padding: 8px 12px;
-  color: #fff;
+  color: $white;
   margin: 60px 0 0;
   display: inline-block;
   &:hover,
   &:active,
   &:focus {
     background-color: $base-accent-highlighted-color;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -92,47 +92,89 @@ img.emoji{
   background-color: $brand-primary;
   color: $white;
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
+  border-radius: 32px;
+  margin: 80px 0;
   &:hover,
   &:active,
   &:focus {
     background-color: $base-accent-highlighted-color;
-    color: #fff;
+    color: $white;
   }
 }
 
-.button-secondary {
-  background-color: $white;
-  color: $brand-primary;
-  border: 1px solid $brand-primary;
-  font-size: 16px;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
+.button-on-dark {
+  border: 1px solid $white;
+  border-radius: 32px;
+  padding: 12px 24px;
+  font-weight: 400;
+  background: linear-gradient(90deg, $charcoal 50%, $white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  background-size: 300%;
+  background-position: 100%;
+  transition: 1s, font-size 0.2s;
+  color: $white; /*For IE*/
+
+  &:after {
+    border-radius: 32px;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, $white 50%, transparent 50%);
+    z-index: -1;
+    background-size: 300%;
+    background-position: 100%;
+    transition: 1s, font-size 0.2s;
+  }
+
   &:hover,
-  &:active,
-  &:focus {
-    background-color: $base-accent-highlighted-color;
-    color: #fff;
+  &:hover::after {
+    background-position: 0;
+    color: $white;
   } 
 }
 
-.btn-outline {
-    color: $brand-primary;
-    padding: 8px 16px;
-    border: 1px solid $brand-primary;
-    border-radius: 4px;
-    transition: color $base-transition-speed linear;
-    &:hover,
-    &:active,
-    &:focus {
-      background: $brand-primary;
-      color: #fff;
-      text-shadow: 1px 1px 0px rgba(0,0,0,0.10);
-      box-shadow: 2px 4px 2px rgba(0,0,0,0.10);
-    }
+.button-on-white, .btn-outline {
+  border: 1px solid $charcoal;
+  border-radius: 32px;
+  padding: 12px 24px;
+  font-weight: 400;
+  background: linear-gradient(90deg, $white 50%, $charcoal 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  background-size: 300%;
+  background-position: 100%;
+  transition: 1s, font-size 0.2s;
+  color: $charcoal; /*For IE*/
+
+  &:after {
+    border-radius: 32px;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, $charcoal 50%, transparent 50%);
+    z-index: -1;
+    background-size: 300%;
+    background-position: 100%;
+    transition: 1s, font-size 0.2s;
+  }
+
+  &:hover,
+  &:hover::after {
+    background-position: 0;
+    color: $white;
+  } 
 }
 
 /* type colors */
@@ -144,33 +186,112 @@ img.emoji{
 
 .header {
   padding: 40px 0;
+  position: absolute;
+  width: 100%;
+  a{
+    color: $white;
+  }
 }
-
+.header-white{
+  a{
+    color: $charcoal;
+  }
+}
 .intro {
-  padding: 0;
-  margin-bottom: 80px;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: $charcoal;
+  .row{
+    padding: 33vh 0;
+  }
+  h1{
+    margin-bottom: 56px;
+    color: $white;
+  }
+  .button-primary{
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 32px;
+    padding: 12px 24px;
+    font-weight: 400;
+  }
 }
 
 .intro hr {
   margin:24px 0;
 }
 
-.projects {
-  background-color: #f1f1f1;
-  h3 {
-    margin: $margin-b-l;
+.case-study-heading{
+  padding: 25vh 0 0;
+}
+.about,{
+  padding: 25vh 0 160px;
+  h2{
+    margin-bottom: 48px;
+  }
+  img{
+    border-radius: 200px;
+  }
+  hr{
+    margin: 80px 0;
+  }
+  a{
+    color: $brand-primary;
+    font-weight: 600;
+  }
+  .info-item{
+    margin-bottom: 80px;
   }
 }
-
-.project-card { 
-  padding: 24px;
-  box-shadow: 0px 0px 8px rgba(0,0,0,0.12);
-  background-color: #ffffff;
-  margin-bottom: 32px;
+.projects {
+  h2 {
+    margin: 0 0 80px;
+  }
+  .project-card { 
+    margin-bottom: 160px;
+    a{
+      display: inline-block;
+    }
+  }
+  .project-thumbnail{
+    margin-bottom: 40px;
+  }
+}
+.only-projects{
+  padding: 25vh 0 0;
 }
 
 .footer {
-  padding: 96px 0;
+  padding: 160px 0 80px;
+  background-color:$charcoal;
+  h2, p, a{
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+  }
+  a{
+    opacity: 0.8;
+    margin: 0 12px;
+    font-weight: 400;
+  }
+  .footnote{
+    margin: 0 80px 0;
+    small{
+      font-size: 70%;
+      opacity: 0.5;
+    }
+  }
+  span{
+    display: block;
+    width: 56px;
+    height: 2px;
+    margin: 80px auto;
+    background-color: $white;
+    opacity: 0.1;
+    border-radius: 4px;
+  }
 }
 
 .elsewhere {
@@ -179,11 +300,16 @@ img.emoji{
 }
 
 section { 
-  padding:90px 0
+  padding:80px 0
 }
 
 .case-study {
   padding-bottom:0px;
+
+  a{
+    color: $brand-primary;
+    font-weight: 600;
+  }
 }
 
 .no-padding img {
@@ -206,16 +332,16 @@ section {
 }
 
 .bg_gray {
-  background-color:#f5f5f5;
+  background-color:$gray-background;
 }
 
 .bg_dark_gray {
-  backgorund-color: #e1e3e6;
+  backgorund-color: $light-ash;
 }
 
 
 .bg_black {
-  background-color:#181717;
+  background-color:$charcoal;
 
   h2, h3, h4 {
     color: #FB7F0E;
@@ -224,7 +350,7 @@ section {
     color: rgba(255,255,255,0.7);
   }
   .info-item {
-    margin-bottom: 88px;
+    margin-bottom: 80px;
   }
 }
 
@@ -232,7 +358,7 @@ section {
   background-color:#7672C4;
 
   h2, h3, h4 {
-    color: #ffffff;
+    color: $white;
   }
   p, ol, ul {
     color: rgba(255,255,255,0.7);
@@ -257,6 +383,12 @@ html.sr .reveal {
   width: 100%;
 }
 
-.nav{
-    justify-content: flex-end;
+.nav.home {
+    justify-content: flex-start;
+    a {
+      padding: 0.5rem 0;
+    }
+}
+.nav.other {
+  justify-content: flex-end;
 }

@@ -1,23 +1,54 @@
 ---
-layout: default
-
-title: "Portfolio of Niranjan Gupta"
-
-description: "Niranjan Gupta is an experienced designer and has around 6 years of industry experience. He has designed UI/UX, Brand guidelines, Digital Products, Websites, Apps, Digital Experiences and helped build successful startups."
-
+layout: home
+title: "Niranjan Gupta - A Digital Product Designer"
+description: "Niranjan Gupta is a versatile digital product designer with over a decade of experience in designing sass products, websites, apps, brand identities, and brand guidelines. He has helped startups build successful products that have out numbered business expectations."
 image : "niranjan-gupta.png"
 ---
-
-{% for post in paginator.posts %}
-<div class="col-12 col-lg-4">
-  <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-    <div class="project-card reveal">
-      <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
-      <h4>{{ post.title }}</h4>
-      <p>{{ post.intro }}</p>
-      <span class="tag"></span>
-      <span class="card-access-icon"></span>
+<!-- Intro -->
+<section class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-12">
+        <h1 class="text-reveal-left">Hi! I am Niranjan Gupta. <br>A curious soul trying to humanise digital world.</h1>
+        <ul class="list-inline reveal">
+          <li class="list-inline-item">
+            <a class="button-on-dark" target="_blank" href="https://docs.google.com/document/d/13o-EkbE6YPnnODl0VLqgxUo0XU2MFdlrHBh_heow9xY/edit?usp=sharing">View resumé</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </a>
-</div>
-{% endfor %}
+  </div>  
+</section>
+
+<!-- content -->
+<section class="projects">
+  <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <h2>Projects</h2>
+          <div class="row ">
+            {% for post in site.posts %}
+            <div class="col-12 col-lg-12">
+              <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                <div class="project-card">
+                  <div class="row">
+                    <div class="col-12">
+                      <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
+                    </div>
+                    <div class="col-12">
+                      <h3>{{ post.title }}</h3>
+                      <p>{{ post.intro }}</p>
+                      <!-- <span class="tag"></span>
+                      <span class="card-access-icon"></span> -->
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<hr>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "NIDRA"
-intro: "How do we improve the sleep quality of Indians? [15 days UX course work]"
+title: "Nidra – A smart sleeping POD for busy Indians"
+intro: "User Research done to during on campus HCI course at IIT-Bombay to understand and improve the sleep quality of people living in metro cities."
 brief: "A smart sleeping POD for busy Indians."
 image: "nidra/hero.png"
 tags: [UX]

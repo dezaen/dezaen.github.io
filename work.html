@@ -1,0 +1,39 @@
+---
+layout: project
+title: "Niranjan Gupta - A Digital Product Designer"
+description: "Niranjan Gupta is a versatile digital product designer with over a decade of experience in designing sass products, websites, apps, brand identities, and brand guidelines. He has helped startups build successful products that have out numbered business expectations."
+image : "niranjan-gupta.png"
+---
+
+<!-- content -->
+<section class="projects only-projects">
+    <div class="container">
+        <div class="row">
+          <div class="col-10 offset-1">
+            <h2>All Work</h2>
+            <div class="row ">
+              {% for post in site.posts %}
+              <div class="col-12 col-lg-12">
+                <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                  <div class="project-card">
+                    <div class="row">
+                      <div class="col-12">
+                        <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
+                      </div>
+                      <div class="col-12">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.intro }}</p>
+                        <!-- <span class="tag"></span>
+                        <span class="card-access-icon"></span> -->
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <hr>

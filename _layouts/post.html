@@ -3,15 +3,15 @@
 {% include head.html %}
 <body>
     <!-- header and hero -->
-    <section class="header">
-      {% include navigation-post.html %}
+    <section class="header header-white">
+      {% include navigation.html %}
     </section>
     
     <!-- case study -->
     <section class="case-study">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-12 case-study-heading">
             <h1 class="reveal">{{ page.title }}</h1>
             <p class="reveal">{{ page.brief }}</p>
           </div>
@@ -26,13 +26,13 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-12">
-            <h3>Other selected projects</h3>
+            <h3>Other Projects</h3>
           </div>
           {% for post in site.posts %}
            {% if post.url != page.url %}
             <div class="col-12 col-lg-4">
               <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-                <div class="project-card reveal">
+                <div class="project-card">
                   <img class="project-thumbnail" src="{% asset {{post.image}} @path %}" alt="{{post.image.alt}}" />
                   <h4>{{ post.title }}</h4>
                   <p>{{ post.intro }}</p>
