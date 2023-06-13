@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Elucidata Branding"
-intro: "Identity, Branding, and Website Design for Elucidata."
+title: "Elucidata – Identity & Branding"
+intro: "Conceptualised design identity for the company and created guidelines for branding and marketing materials. Also, designed and coded and managed the new website."
 brief: "Fresh me, ready to put a dent in Biotech"
 image: "elucidata-branding/hero.png"
 tags: [branding]

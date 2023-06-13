@@ -1,27 +1,25 @@
 // Typography
 // =============================================================================
 
-$sans-serif: 'Oswald', sans-serif;
-$serif: 'Merriweather', serif;
-$base-font-family: $sans-serif;
-$base-font-weight: 400;
-$base-font-weight-bold: 500;
-$base-font-weight-thin: 300;
+$heading-font: 'Erode', serif;
+$body-font: 'Recia', serif;
+$base-font-family: $body-font;
+
 
 // Font sizes
 $base-font-size: 8px;
-$base-line-height: 1.8;
+$base-line-height: 1.5;
 
 
 html, html::selection {
-  font-size: $base-font-size * 2;
+  font-size: $base-font-size * 2.5;
 }
 
 body {
   margin: 0 auto;
-  font-family: $serif;
+  font-family: $body-font;
   -webkit-font-smoothing: antialiased;
-  font-weight: $base-font-weight;
+  font-weight: 400;
   line-height: $base-line-height;
   color: $charcoal;
   background: $white;
@@ -39,14 +37,14 @@ body {
 
 p {
   margin: 0 0 24px;
-  font-weight: $base-font-weight;
+  font-weight: 400;
   line-height: $base-line-height;
   color: $light-charcoal;
 }
 
 b,
 strong {
-  font-weight: $base-font-weight-bold;
+  font-weight: 600;
 }
 
 h1,
@@ -55,31 +53,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:$sans-serif;
+  font-family:$heading-font;
   margin: 0 0 16px;
   line-height: $base-line-height;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   color: $charcoal;
-  font-weight: $base-font-weight;
-  letter-spacing:0.4px;
-  color: $primary-color;
-  text-transform:uppercase;
+  letter-spacing:0.1px;
+  color: $charcoal;
+  line-height: 130%;
 }
 
 h1 {
-  font-size: $base-font-size * 5;
+  font-size: $base-font-size * 6;
 }
 
 h2 {
-  font-size: $base-font-size * 4;
+  font-size: $base-font-size * 5;
 }
 
 h3 {
-  font-size: $base-font-size * 3;
+  font-size: $base-font-size * 4;
 }
 
 h4 {
-  font-size: $base-font-size * 2.5;
+  font-size: $base-font-size * 3;
 }
 
 
@@ -102,17 +100,17 @@ h4 {
 }
 
 a {
-  color: $brand-primary;
+  color: $charcoal;
   text-decoration: none;
-  font-weight: 700;
+  font-family: $body-font;
   transition: color $base-transition-speed linear;
   &:hover,
   &:active {
-    color: $base-accent-highlighted-color;
+    color: $charcoal;
     text-decoration: none;
   }
   &:focus {
-    color: $base-accent-highlighted-color;
+    color: $charcoal;
     outline: none;
     text-decoration: none;
   }

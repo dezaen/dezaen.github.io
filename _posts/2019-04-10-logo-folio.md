@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Logo Folio"
-intro: "A collection of identities designed so far"
-brief: "Simple, elegant and timeless shapes"
+title: "Logo Folio - A collection of identities designed for various companies"
+intro: "Identities designed in the quest of timelessness, uniqueness, recognisability and ability to be used in various context"
+brief: "Simple, Elegant, Beautiful and Timeless Shapes"
 image: "logo-folio/folio-thumbnail.png"
 tags: [Logo design]
 
