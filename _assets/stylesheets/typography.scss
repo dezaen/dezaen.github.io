@@ -1,10 +1,9 @@
 // Typography
 // =============================================================================
 
-$heading-font: 'Erode', serif;
-$body-font: 'Recia', serif;
+$heading-font: 'Kanit', serif;
+$body-font: 'Kanit', serif;
 $base-font-family: $body-font;
-
 
 // Font sizes
 $base-font-size: 8px;
@@ -14,17 +13,6 @@ $base-line-height: 1.5;
 html, html::selection {
   font-size: $base-font-size * 2.5;
 }
-
-body {
-  margin: 0 auto;
-  font-family: $body-font;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  line-height: $base-line-height;
-  color: $charcoal;
-  background: $white;
-}
-
 ::-moz-selection {
   background-color: rgba(58, 88, 246, 0.16) !important;
   color: rgb(58, 88, 246) !important;
@@ -34,19 +22,6 @@ body {
   background-color: rgba(58, 88, 246, 0.16);
   color: rgb(58, 88, 246);
 }
-
-p {
-  margin: 0 0 24px;
-  font-weight: 400;
-  line-height: $base-line-height;
-  color: $light-charcoal;
-}
-
-b,
-strong {
-  font-weight: 600;
-}
-
 h1,
 h2,
 h3,
@@ -54,9 +29,8 @@ h4,
 h5,
 h6 {
   font-family:$heading-font;
-  margin: 0 0 16px;
   line-height: $base-line-height;
-  font-weight: 600;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   color: $charcoal;
   letter-spacing:0.1px;
@@ -66,21 +40,65 @@ h6 {
 
 h1 {
   font-size: $base-font-size * 6;
+  margin: 0 0 40px;
 }
 
 h2 {
   font-size: $base-font-size * 5;
+  margin: 0 0 40px;
 }
 
 h3 {
   font-size: $base-font-size * 4;
+  margin: 0 0 16px;
 }
 
 h4 {
   font-size: $base-font-size * 3;
+  margin: 0 0 16px;
 }
 
+body {
+  margin: 0 auto;
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: $base-line-height;
+  color: $charcoal;
+  background: $white;
+}
 
+p {
+  margin: 0 0 16px;
+  font-weight: 300;
+  line-height: $base-line-height;
+  color: $light-charcoal;
+}
+
+b,
+strong {
+  font-weight: 300;
+}
+
+a {
+  color: $charcoal;
+  font-weight: 300;
+  text-decoration: none;
+  font-family: $body-font;
+  transition: color $base-transition-speed linear;
+  &:hover,
+  &:active {
+    color: $charcoal;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $charcoal;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+// Adaptive typography
 @include breakpoint(small) {
   h1 {
     font-size: $base-font-size * 4;
@@ -96,22 +114,5 @@ h4 {
   }
   html {
     font-size: $base-font-size * 2;
-  }
-}
-
-a {
-  color: $charcoal;
-  text-decoration: none;
-  font-family: $body-font;
-  transition: color $base-transition-speed linear;
-  &:hover,
-  &:active {
-    color: $charcoal;
-    text-decoration: none;
-  }
-  &:focus {
-    color: $charcoal;
-    outline: none;
-    text-decoration: none;
   }
 }

@@ -190,11 +190,13 @@ img.emoji{
   width: 100%;
   a{
     color: $white;
+    font-weight: 300;
   }
 }
 .header-white{
   a{
     color: $charcoal;
+    font-weight: 300;
   }
 }
 .intro {
@@ -227,7 +229,7 @@ img.emoji{
 .case-study-heading{
   padding: 25vh 0 0;
 }
-.about,{
+.about{
   padding: 25vh 0 160px;
   h2{
     margin-bottom: 48px;
@@ -240,28 +242,23 @@ img.emoji{
   }
   a{
     color: $brand-primary;
-    font-weight: 600;
   }
   .info-item{
     margin-bottom: 80px;
   }
 }
 .projects {
-  h2 {
-    margin: 0 0 80px;
-  }
   .project-card { 
     margin-bottom: 160px;
-    a{
-      display: inline-block;
-    }
   }
   .project-thumbnail{
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
+  h2 { margin: 0 0 40px;}
+  h3, p{margin: 0 0 8px;}
 }
 .only-projects{
-  padding: 25vh 0 0;
+  padding: 25vh 0;
 }
 
 .footer {
@@ -275,7 +272,7 @@ img.emoji{
   a{
     opacity: 0.8;
     margin: 0 12px;
-    font-weight: 400;
+    font-weight: 300;
   }
   .footnote{
     margin: 0 80px 0;
@@ -309,7 +306,6 @@ section {
 
   a{
     color: $brand-primary;
-    font-weight: 600;
   }
 }
 
@@ -416,7 +412,7 @@ html.sr .reveal {
 .sphere path {
   fill: url(#sphereGradient);
   stroke-width: 1px;
-  stroke: rgba(80,80,80,.35);
+  stroke: rgba(30, 30, 30, 0.609);
   backface-visibility: hidden;
 }
 
